@@ -1,58 +1,95 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\",
+  "WorkspaceRootPath": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\usuario.cln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\usuario.cln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\formautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\formautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\marcacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\marcacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\formautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\formautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\categoriacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\categoriacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D1AAB3-9CBF-4854-B6E7-0DD987843BFB}|TiendaElectronica\\CadTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\tiendaelectronica\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{69D1AAB3-9CBF-4854-B6E7-0DD987843BFB}|TiendaElectronica\\CadTiendaElectronica.csproj|solutionrelative:tiendaelectronica\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\empleadocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\empleadocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\formempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\ventadetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\cptiendaelectronica\\formempleado.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393DE99B-7695-4F24-BA33-91773F3B6756}|CpTiendaElectronica\\CpTiendaElectronica.csproj|solutionrelative:cptiendaelectronica\\formempleado.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\ventadetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\ventadetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\compradetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\compradetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\ventacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\ventacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\ventacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\compracln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\compracln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\filof\\desktop\\proyecto 457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\usuario.cln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\usuario.cln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\proveedorcln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\proveedorcln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\proveedorcln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|c:\\users\\russopablo\\desktop\\proyecto sis457\\sis457_tienda_electronica\\tiendaelectronica\\clntiendaelectronica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\marcacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\marcacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\empleadocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\empleadocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\compradetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\compradetallecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\compracln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\compracln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\clientecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\categoriacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\categoriacln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filof\\AppData\\Local\\Temp\\wyi2zmp4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\clntiendaelectronica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E0995DF5-DBF1-42CC-8495-73180314CA9A}|ClnTiendaElectronica\\ClnTiendaElectronica.csproj|solutionrelative:clntiendaelectronica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filof\\AppData\\Local\\Temp\\wyi2zmp4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\filof\\AppData\\Local\\Temp\\wyi2zmp4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,179 +99,280 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\TiendaElectronica\\Model1.edmx",
-              "RelativeDocumentMoniker": "TiendaElectronica\\Model1.edmx",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\TiendaElectronica\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "TiendaElectronica\\Model1.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-05-12T04:58:19.314Z",
-              "EditorCaption": " [Diagram1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClienteCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ClienteCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\ClienteCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ClienteCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\ClienteCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FormAutenticacion.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormAutenticacion.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\FormAutenticacion.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormAutenticacion.cs",
+              "RelativeToolTip": "CpTiendaElectronica\\FormAutenticacion.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:50:16.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmpleadoCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\EmpleadoCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\EmpleadoCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\EmpleadoCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\EmpleadoCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:45:13.996Z",
+              "WhenOpened": "2025-05-13T00:07:06.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MarcaCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\MarcaCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\MarcaCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\MarcaCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\MarcaCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Title": "FormAutenticacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormAutenticacion.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\FormAutenticacion.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormAutenticacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpTiendaElectronica\\FormAutenticacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:47:37.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T00:03:35.832Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CategoriaCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CategoriaCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\CategoriaCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CategoriaCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\CategoriaCln.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:49:07.402Z",
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\App.config",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\App.config",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\App.config",
+              "RelativeToolTip": "CpTiendaElectronica\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-12T23:58:30.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\Program.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\Program.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\Program.cs",
+              "RelativeToolTip": "CpTiendaElectronica\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T23:54:22.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Util.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\Util.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\Util.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\Util.cs",
+              "RelativeToolTip": "CpTiendaElectronica\\Util.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T23:48:41.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormEmpleado.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormEmpleado.Designer.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\FormEmpleado.Designer.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormEmpleado.Designer.cs",
+              "RelativeToolTip": "CpTiendaElectronica\\FormEmpleado.Designer.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T23:47:16.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Usuario.cln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\Usuario.cln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\Usuario.cln.cs",
               "RelativeDocumentMoniker": "ClnTiendaElectronica\\Usuario.cln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\Usuario.cln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\Usuario.cln.cs",
               "RelativeToolTip": "ClnTiendaElectronica\\Usuario.cln.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T04:33:41.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VentaDetalleCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaDetalleCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\VentaDetalleCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaDetalleCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\VentaDetalleCln.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAuwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:57:12.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CompraDetalleCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraDetalleCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\CompraDetalleCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraDetalleCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\CompraDetalleCln.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:56:48.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "VentaCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaCln.cs",
               "RelativeDocumentMoniker": "ClnTiendaElectronica\\VentaCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaCln.cs",
               "RelativeToolTip": "ClnTiendaElectronica\\VentaCln.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T04:50:57.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CompraCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraCln.cs",
-              "RelativeDocumentMoniker": "ClnTiendaElectronica\\CompraCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraCln.cs",
-              "RelativeToolTip": "ClnTiendaElectronica\\CompraCln.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAA8wEQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "VentaDetalleCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaDetalleCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\VentaDetalleCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\VentaDetalleCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\VentaDetalleCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T04:50:40.411Z",
+              "WhenOpened": "2025-05-12T04:57:12.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
+              "Title": "FormEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormEmpleado.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\FormEmpleado.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpTiendaElectronica\\FormEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T23:16:41.088Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormEmpleado.cs",
+              "RelativeDocumentMoniker": "CpTiendaElectronica\\FormEmpleado.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\CpTiendaElectronica\\FormEmpleado.cs",
+              "RelativeToolTip": "CpTiendaElectronica\\FormEmpleado.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAlwIQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T23:18:07.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ProveedorCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProveedorCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProveedorCln.cs",
               "RelativeDocumentMoniker": "ClnTiendaElectronica\\ProveedorCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProveedorCln.cs*",
-              "RelativeToolTip": "ClnTiendaElectronica\\ProveedorCln.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProveedorCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\ProveedorCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T04:47:55.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ProductoCln.cs",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProductoCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProductoCln.cs",
               "RelativeDocumentMoniker": "ClnTiendaElectronica\\ProductoCln.cs",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProductoCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ProductoCln.cs",
               "RelativeToolTip": "ClnTiendaElectronica\\ProductoCln.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwAcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T04:46:23.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
+              "Title": "MarcaCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\MarcaCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\MarcaCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\MarcaCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\MarcaCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:47:37.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EmpleadoCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\EmpleadoCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\EmpleadoCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\EmpleadoCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\EmpleadoCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:45:13.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CompraDetalleCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraDetalleCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\CompraDetalleCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraDetalleCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\CompraDetalleCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:56:48.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CompraCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\CompraCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CompraCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\CompraCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:50:40.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ClienteCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ClienteCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\ClienteCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\ClienteCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\ClienteCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:50:16.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CategoriaCln.cs",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CategoriaCln.cs",
+              "RelativeDocumentMoniker": "ClnTiendaElectronica\\CategoriaCln.cs",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\CategoriaCln.cs",
+              "RelativeToolTip": "ClnTiendaElectronica\\CategoriaCln.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:49:07.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\filof\\AppData\\Local\\Temp\\wyi2zmp4..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\wyi2zmp4..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-12T23:35:05.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\App.config",
+              "DocumentMoniker": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\App.config",
               "RelativeDocumentMoniker": "ClnTiendaElectronica\\App.config",
-              "ToolTip": "C:\\Users\\RussoPablo\\Desktop\\proyecto sis457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\App.config",
+              "ToolTip": "C:\\Users\\filof\\Desktop\\Proyecto 457\\sis457_Tienda_Electronica\\TiendaElectronica\\ClnTiendaElectronica\\App.config",
               "RelativeToolTip": "ClnTiendaElectronica\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-05-12T04:43:19.637Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
             }
           ]
         }

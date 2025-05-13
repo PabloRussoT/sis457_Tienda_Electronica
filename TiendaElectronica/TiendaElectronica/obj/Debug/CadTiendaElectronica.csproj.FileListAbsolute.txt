@@ -10,3 +10,15 @@ C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElec
 C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\CadTiend.21DC3F98.Up2Date
 C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.dll
 C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.pdb
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\TiendaElectronica.dll.config
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\TiendaElectronica.dll
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\TiendaElectronica.pdb
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.dll
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.xml
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\CadTiendaElectronica.csproj.AssemblyReference.cache
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\CadTiendaElectronica.csproj.CoreCompileInputs.cache
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\CadTiend.21DC3F98.Up2Date
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.dll
+C:\Users\filof\Desktop\Proyecto 457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.pdb

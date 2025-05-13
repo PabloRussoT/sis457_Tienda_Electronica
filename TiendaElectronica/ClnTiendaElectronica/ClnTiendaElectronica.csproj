@@ -46,6 +46,8 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,9 +70,9 @@
     <Compile Include="VentaDetalleCln.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TiendaElectronica\CadTiendaElectronica.csproj">
+    <ProjectReference Include="..\TiendaElectronica\TiendaElectronica.csproj">
       <Project>{69d1aab3-9cbf-4854-b6e7-0dd987843bfb}</Project>
-      <Name>CadTiendaElectronica</Name>
+      <Name>TiendaElectronica</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
