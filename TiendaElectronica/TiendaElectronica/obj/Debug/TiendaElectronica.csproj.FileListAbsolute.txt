@@ -1,0 +1,12 @@
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\TiendaElectronica.dll.config
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\TiendaElectronica.dll
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\TiendaElectronica.pdb
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.dll
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.xml
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.csproj.AssemblyReference.cache
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.csproj.CoreCompileInputs.cache
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaEl.841C7933.Up2Date
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.dll
+C:\Users\RussoPablo\Desktop\proyecto sis457\sis457_Tienda_Electronica\TiendaElectronica\TiendaElectronica\obj\Debug\TiendaElectronica.pdb

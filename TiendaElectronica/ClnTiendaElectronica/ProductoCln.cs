@@ -68,7 +68,7 @@ namespace ClnTiendaElectronica
             }
         }
 
-        public static List<Producto> listar(string filtro = null)
+        public static List<Producto> listarPa(string filtro = null)
         {
             using (var context = new TiendaElectronicaEntities())
             {

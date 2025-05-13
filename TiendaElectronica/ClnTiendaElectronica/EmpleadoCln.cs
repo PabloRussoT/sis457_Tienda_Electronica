@@ -22,7 +22,7 @@ namespace ClnTiendaElectronica
             }
         }
 
-        public static int actualizar(Empleado empleado)
+        public static int actualizar(Empleado empleado, string v)
         {
             using (var context = new TiendaElectronicaEntities())
             {
@@ -75,6 +75,29 @@ namespace ClnTiendaElectronica
                                 e.segundoApellido.Contains(filtro))
                     .ToList();
             }
+        }
+
+        public static List<paEmpleadoListar_Result> listarPa(string parametro)
+        {
+            using (var context = new TiendaElectronicaEntities())
+            {
+                return context.paEmpleadoListar(parametro).ToList();
+            }
+        }
+
+        public static void insertar(Empleado empleado, Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void actualizar(Empleado empleado, string v1, string v2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void eliminar(int id, string usuario1)
+        {
+            throw new NotImplementedException();
         }
     }
 }

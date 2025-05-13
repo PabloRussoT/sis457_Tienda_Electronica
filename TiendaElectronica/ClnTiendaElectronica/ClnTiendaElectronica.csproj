@@ -64,7 +64,7 @@
     <Compile Include="MarcaCln.cs" />
     <Compile Include="ProductoCln.cs" />
     <Compile Include="ProveedorCln.cs" />
-    <Compile Include="Usuario.cln.cs" />
+    <Compile Include="UsuarioCln.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VentaCln.cs" />
     <Compile Include="VentaDetalleCln.cs" />
