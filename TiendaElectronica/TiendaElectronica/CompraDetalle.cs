@@ -19,7 +19,7 @@ namespace TiendaElectronica
         public int idProducto { get; set; }
         public decimal cantidad { get; set; }
         public decimal precioUnitario { get; set; }
-        public decimal subtotal { get; set; }
+        public decimal total { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }

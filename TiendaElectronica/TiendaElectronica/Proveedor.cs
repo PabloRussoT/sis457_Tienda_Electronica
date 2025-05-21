@@ -25,8 +25,6 @@ namespace TiendaElectronica
         public string razonSocial { get; set; }
         public string direccion { get; set; }
         public string telefono { get; set; }
-        public string email { get; set; }
-        public string sitioWeb { get; set; }
         public string representante { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }

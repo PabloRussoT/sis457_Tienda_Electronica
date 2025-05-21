@@ -1,58 +1,92 @@
-﻿using System;
+﻿using TiendaElectronica;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using TiendaElectronica;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Data.Entity.Core.Objects;
-using System.Linq.Expressions;
+
 namespace ClnTiendaElectronica
 {
     public class EmpleadoCln
     {
-        public static int insertar(Empleado empleado)
+        public static int insertar(Empleado empleado, Usuario usuario)
         {
             using (var context = new TiendaElectronicaEntities())
             {
                 context.Empleado.Add(empleado);
                 context.SaveChanges();
+
+                if (usuario != null && UsuarioCln.obtenerUnoPorEmpleado(empleado.id) == null)
+                {
+                    usuario.idEmpleado = empleado.id;
+                    usuario.usuarioRegistro = empleado.usuarioRegistro;
+                    usuario.fechaRegistro = empleado.fechaRegistro;
+                    usuario.estado = empleado.estado;
+                    UsuarioCln.insertar(usuario);
+                }
+
                 return empleado.id;
             }
         }
 
-        public static int actualizar(Empleado empleado, string v)
+        public static int actualizar(Empleado empleado, string nombreUsuario, string clave)
         {
             using (var context = new TiendaElectronicaEntities())
             {
                 var existente = context.Empleado.Find(empleado.id);
-                if (existente != null)
+                existente.cedulaIdentidad = empleado.cedulaIdentidad;
+                existente.nombres = empleado.nombres;
+                existente.primerApellido = empleado.primerApellido;
+                existente.segundoApellido = empleado.segundoApellido;
+                existente.direccion = empleado.direccion;
+                existente.celular = empleado.celular;
+                existente.cargo = empleado.cargo;
+                existente.usuarioRegistro = empleado.usuarioRegistro;
+
+                if (!string.IsNullOrEmpty(nombreUsuario))
                 {
-                    existente.cedulaIdentidad = empleado.cedulaIdentidad;
-                    existente.nombres = empleado.nombres;
-                    existente.primerApellido = empleado.primerApellido;
-                    existente.segundoApellido = empleado.segundoApellido;
-                    existente.direccion = empleado.direccion;
-                    existente.celular = empleado.celular;
-                    existente.email = empleado.email;
-                    existente.cargo = empleado.cargo;
+                    var usuario = UsuarioCln.obtenerUnoPorEmpleado(existente.id);
+                    if (usuario != null)
+                    {
+                        usuario.usuario1 = nombreUsuario;
+                        usuario.usuarioRegistro = empleado.usuarioRegistro;
+                        UsuarioCln.actualizar(usuario);
+                    }
+                    else
+                    {
+                        usuario = new Usuario
+                        {
+                            idEmpleado = existente.id,
+                            usuario1 = nombreUsuario,
+                            clave = clave,
+                            estado = 1,
+                            fechaRegistro = DateTime.Now,
+                            usuarioRegistro = empleado.usuarioRegistro
+                        };
+                        UsuarioCln.insertar(usuario);
+                    }
                 }
+
                 return context.SaveChanges();
             }
         }
 
-        public static int eliminar(int id)
+        public static int eliminar(int id, string usuario)
         {
             using (var context = new TiendaElectronicaEntities())
             {
                 var empleado = context.Empleado.Find(id);
-                if (empleado != null)
+                empleado.estado = -1;
+                empleado.usuarioRegistro = usuario;
+
+                var usuarioEmpleado = UsuarioCln.obtenerUnoPorEmpleado(empleado.id);
+                if (usuarioEmpleado != null)
                 {
-                    context.Empleado.Remove(empleado);
-                    return context.SaveChanges();
+                    UsuarioCln.eliminar(usuarioEmpleado.id, usuario);
                 }
-                return 0;
+
+                return context.SaveChanges();
             }
         }
 
@@ -60,20 +94,7 @@ namespace ClnTiendaElectronica
         {
             using (var context = new TiendaElectronicaEntities())
             {
-                return context.Empleado.FirstOrDefault(x => x.id == id);
-            }
-        }
-
-        public static List<Empleado> listar(string filtro = null)
-        {
-            using (var context = new TiendaElectronicaEntities())
-            {
-                return context.Empleado
-                    .Where(e => string.IsNullOrEmpty(filtro) ||
-                                e.nombres.Contains(filtro) ||
-                                e.primerApellido.Contains(filtro) ||
-                                e.segundoApellido.Contains(filtro))
-                    .ToList();
+                return context.Empleado.Include(x => x.Usuario).Where(x => x.id == id).FirstOrDefault();
             }
         }
 
@@ -83,21 +104,6 @@ namespace ClnTiendaElectronica
             {
                 return context.paEmpleadoListar(parametro).ToList();
             }
-        }
-
-        public static void insertar(Empleado empleado, Usuario usuario)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void actualizar(Empleado empleado, string v1, string v2)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void eliminar(int id, string usuario1)
-        {
-            throw new NotImplementedException();
         }
     }
 }

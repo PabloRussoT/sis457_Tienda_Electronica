@@ -1,4 +1,4 @@
-﻿namespace CpMinerva
+﻿namespace CpTiendaElectronica
 {
     partial class FrmProducto
     {
@@ -136,7 +136,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Image = global::CpMinerva.Properties.Resources.close;
+            this.btnCerrar.Image = global::CpTiendaElectronica.Properties.Resources.close;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.Location = new System.Drawing.Point(495, 3);
             this.btnCerrar.Name = "btnCerrar";
@@ -150,7 +150,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Image = global::CpMinerva.Properties.Resources.delete;
+            this.btnEliminar.Image = global::CpTiendaElectronica.Properties.Resources.delete;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(387, 3);
             this.btnEliminar.Name = "btnEliminar";
@@ -164,7 +164,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Image = global::CpMinerva.Properties.Resources.edit;
+            this.btnEditar.Image = global::CpTiendaElectronica.Properties.Resources.edit;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(283, 3);
             this.btnEditar.Name = "btnEditar";
@@ -178,7 +178,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::CpMinerva.Properties.Resources._new;
+           // this.btnNuevo.Image = global::CpTiendaElectronica.Properties.Resources._new;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(179, 3);
             this.btnNuevo.Name = "btnNuevo";
@@ -213,7 +213,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Image = global::CpMinerva.Properties.Resources.cancel;
+            this.btnCancelar.Image = global::CpTiendaElectronica.Properties.Resources.cancel;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(678, 71);
             this.btnCancelar.Name = "btnCancelar";
@@ -227,7 +227,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Image = global::CpMinerva.Properties.Resources.save;
+            this.btnGuardar.Image = global::CpTiendaElectronica.Properties.Resources.save;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(567, 71);
             this.btnGuardar.Name = "btnGuardar";
@@ -343,7 +343,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Image = global::CpMinerva.Properties.Resources.search;
+            this.btnBuscar.Image = global::CpTiendaElectronica.Properties.Resources.search;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(709, 50);
             this.btnBuscar.Name = "btnBuscar";

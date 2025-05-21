@@ -1,13 +1,9 @@
-﻿using System;
+﻿using TiendaElectronica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using TiendaElectronica;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Data.Entity.Core.Objects;
-using System.Linq.Expressions;
 
 namespace ClnTiendaElectronica
 {
@@ -28,27 +24,20 @@ namespace ClnTiendaElectronica
             using (var context = new TiendaElectronicaEntities())
             {
                 var existente = context.Usuario.Find(usuario.id);
-                if (existente != null)
-                {
-                    existente.usuario1 = usuario.usuario1;
-                    existente.clave = usuario.clave;
-                    existente.nivelAcceso = usuario.nivelAcceso;
-                }
+                existente.usuario1 = usuario.usuario1;
+                existente.usuarioRegistro = usuario.usuarioRegistro;
                 return context.SaveChanges();
             }
         }
 
-        public static int eliminar(int id)
+        public static int eliminar(int id, string usuarioRegistro)
         {
             using (var context = new TiendaElectronicaEntities())
             {
                 var usuario = context.Usuario.Find(id);
-                if (usuario != null)
-                {
-                    context.Usuario.Remove(usuario);
-                    return context.SaveChanges();
-                }
-                return 0;
+                usuario.estado = -1;
+                usuario.usuarioRegistro = usuarioRegistro;
+                return context.SaveChanges();
             }
         }
 
@@ -56,7 +45,7 @@ namespace ClnTiendaElectronica
         {
             using (var context = new TiendaElectronicaEntities())
             {
-                return context.Usuario.FirstOrDefault(x => x.idEmpleado == idEmpleado);
+                return context.Usuario.Where(x => x.idEmpleado == idEmpleado).FirstOrDefault();
             }
         }
 
@@ -65,7 +54,8 @@ namespace ClnTiendaElectronica
             using (var context = new TiendaElectronicaEntities())
             {
                 return context.Usuario
-                    .FirstOrDefault(u => u.usuario1 == usuario && u.clave == clave);
+                    .Where(u => u.usuario1 == usuario && u.clave == clave)
+                    .FirstOrDefault();
             }
         }
     }

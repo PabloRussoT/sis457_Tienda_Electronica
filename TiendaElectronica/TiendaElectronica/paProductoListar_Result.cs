@@ -14,20 +14,15 @@ namespace TiendaElectronica
     public partial class paProductoListar_Result
     {
         public int id { get; set; }
-        public string codigo { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
         public int idCategoria { get; set; }
         public int idMarca { get; set; }
-        public string modelo { get; set; }
-        public decimal stock { get; set; }
-        public decimal precioCompra { get; set; }
+        public string codigo { get; set; }
+        public string descripcion { get; set; }
+        public string unidadMedida { get; set; }
+        public decimal saldo { get; set; }
         public decimal precioVenta { get; set; }
-        public Nullable<int> garantiaMeses { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
-        public string categoria { get; set; }
-        public string marca { get; set; }
     }
 }

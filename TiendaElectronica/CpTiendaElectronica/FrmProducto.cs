@@ -20,11 +20,6 @@ namespace CpTiendaElectronica
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         private void listar()
         {
             var lista = ProductoCln.listarPa(txtParametro.Text.Trim());

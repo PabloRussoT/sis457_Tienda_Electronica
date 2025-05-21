@@ -5,29 +5,10 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Producto" Relationship="Self.fk_Producto_Categoria" FromRole="Categoria" ToRole="Producto" />
-  </EntityType>
-  <EntityType Name="Cliente">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="tipoDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="numeroDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nombres" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="apellidos" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-    <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="estado" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Venta" Relationship="Self.fk_Venta_Cliente" FromRole="Cliente" ToRole="Venta" />
   </EntityType>
   <EntityType Name="Compra">
     <Key>
@@ -35,10 +16,8 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idProveedor" Type="Int32" Nullable="false" />
-    <Property Name="numeroFactura" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="transaccion" Type="Int32" Nullable="false" />
     <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
@@ -54,7 +33,7 @@
     <Property Name="idProducto" Type="Int32" Nullable="false" />
     <Property Name="cantidad" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precioUnitario" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="subtotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
@@ -72,9 +51,7 @@
     <Property Name="segundoApellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="celular" Type="Int64" Nullable="false" />
-    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechaContratacion" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
@@ -85,10 +62,8 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="pais" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Producto" Relationship="Self.fk_Producto_Marca" FromRole="Marca" ToRole="Producto" />
   </EntityType>
@@ -97,23 +72,19 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="idCategoria" Type="Int32" Nullable="false" />
     <Property Name="idMarca" Type="Int32" Nullable="false" />
-    <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="stock" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="precioCompra" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="unidadMedida" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="saldo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precioVenta" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="garantiaMeses" Type="Int32" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Categoria" Relationship="Self.fk_Producto_Categoria" FromRole="Producto" ToRole="Categoria" />
     <NavigationProperty Name="CompraDetalle" Relationship="Self.fk_CompraDetalle_Producto" FromRole="Producto" ToRole="CompraDetalle" />
     <NavigationProperty Name="Marca" Relationship="Self.fk_Producto_Marca" FromRole="Producto" ToRole="Marca" />
-    <NavigationProperty Name="VentaDetalle" Relationship="Self.fk_VentaDetalle_Producto" FromRole="Producto" ToRole="VentaDetalle" />
   </EntityType>
   <EntityType Name="Proveedor">
     <Key>
@@ -124,8 +95,6 @@
     <Property Name="razonSocial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="sitioWeb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="representante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
@@ -140,50 +109,10 @@
     <Property Name="idEmpleado" Type="Int32" Nullable="false" />
     <Property Name="usuario1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="clave" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="nivelAcceso" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Empleado" Relationship="Self.fk_Usuario_Empleado" FromRole="Usuario" ToRole="Empleado" />
-    <NavigationProperty Name="Venta" Relationship="Self.fk_Venta_Usuario" FromRole="Usuario" ToRole="Venta" />
-  </EntityType>
-  <EntityType Name="Venta">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="idCliente" Type="Int32" Nullable="false" />
-    <Property Name="idUsuario" Type="Int32" Nullable="false" />
-    <Property Name="numeroFactura" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="subtotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="descuento" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="iva" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="tipoPago" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="estado" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Cliente" Relationship="Self.fk_Venta_Cliente" FromRole="Venta" ToRole="Cliente" />
-    <NavigationProperty Name="Usuario" Relationship="Self.fk_Venta_Usuario" FromRole="Venta" ToRole="Usuario" />
-    <NavigationProperty Name="VentaDetalle" Relationship="Self.fk_VentaDetalle_Venta" FromRole="Venta" ToRole="VentaDetalle" />
-  </EntityType>
-  <EntityType Name="VentaDetalle">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="idVenta" Type="Int32" Nullable="false" />
-    <Property Name="idProducto" Type="Int32" Nullable="false" />
-    <Property Name="cantidad" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="precioUnitario" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="descuento" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="subtotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="estado" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Producto" Relationship="Self.fk_VentaDetalle_Producto" FromRole="VentaDetalle" ToRole="Producto" />
-    <NavigationProperty Name="Venta" Relationship="Self.fk_VentaDetalle_Venta" FromRole="VentaDetalle" ToRole="Venta" />
   </EntityType>
   <Association Name="fk_Producto_Categoria">
     <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
@@ -194,18 +123,6 @@
       </Principal>
       <Dependent Role="Producto">
         <PropertyRef Name="idCategoria" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_Venta_Cliente">
-    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
-    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Cliente">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Venta">
-        <PropertyRef Name="idCliente" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -269,45 +186,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_VentaDetalle_Producto">
-    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
-    <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Producto">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="VentaDetalle">
-        <PropertyRef Name="idProducto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_Venta_Usuario">
-    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Venta">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_VentaDetalle_Venta">
-    <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
-    <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Venta">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="VentaDetalle">
-        <PropertyRef Name="idVenta" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="TiendaElectronicaEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Categoria" EntityType="Self.Categoria" />
-    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Compra" EntityType="Self.Compra" />
     <EntitySet Name="CompraDetalle" EntityType="Self.CompraDetalle" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" />
@@ -315,15 +195,9 @@
     <EntitySet Name="Producto" EntityType="Self.Producto" />
     <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-    <EntitySet Name="Venta" EntityType="Self.Venta" />
-    <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
     <AssociationSet Name="fk_Producto_Categoria" Association="Self.fk_Producto_Categoria">
       <End Role="Categoria" EntitySet="Categoria" />
       <End Role="Producto" EntitySet="Producto" />
-    </AssociationSet>
-    <AssociationSet Name="fk_Venta_Cliente" Association="Self.fk_Venta_Cliente">
-      <End Role="Cliente" EntitySet="Cliente" />
-      <End Role="Venta" EntitySet="Venta" />
     </AssociationSet>
     <AssociationSet Name="fk_Compra_Proveedor" Association="Self.fk_Compra_Proveedor">
       <End Role="Proveedor" EntitySet="Proveedor" />
@@ -345,19 +219,13 @@
       <End Role="Marca" EntitySet="Marca" />
       <End Role="Producto" EntitySet="Producto" />
     </AssociationSet>
-    <AssociationSet Name="fk_VentaDetalle_Producto" Association="Self.fk_VentaDetalle_Producto">
-      <End Role="Producto" EntitySet="Producto" />
-      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
-    </AssociationSet>
-    <AssociationSet Name="fk_Venta_Usuario" Association="Self.fk_Venta_Usuario">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Venta" EntitySet="Venta" />
-    </AssociationSet>
-    <AssociationSet Name="fk_VentaDetalle_Venta" Association="Self.fk_VentaDetalle_Venta">
-      <End Role="Venta" EntitySet="Venta" />
-      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
-    </AssociationSet>
     <FunctionImport Name="paCategoriaListar" ReturnType="Collection(TiendaElectronicaModel.paCategoriaListar_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paCompraDetalleListar" ReturnType="Collection(TiendaElectronicaModel.paCompraDetalleListar_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paCompraListar" ReturnType="Collection(TiendaElectronicaModel.paCompraListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="paEmpleadoListar" ReturnType="Collection(TiendaElectronicaModel.paEmpleadoListar_Result)">
@@ -369,18 +237,37 @@
     <FunctionImport Name="paProductoListar" ReturnType="Collection(TiendaElectronicaModel.paProductoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paReporteVentas" ReturnType="Collection(TiendaElectronicaModel.paReporteVentas_Result)">
-      <Parameter Name="fechaInicio" Mode="In" Type="DateTime" />
-      <Parameter Name="fechaFin" Mode="In" Type="DateTime" />
+    <FunctionImport Name="paProveedorListar" ReturnType="Collection(TiendaElectronicaModel.paProveedorListar_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="paCategoriaListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
     <Property Type="String" Name="descripcion" Nullable="true" MaxLength="250" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paCompraDetalleListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="idCompra" Nullable="false" />
+    <Property Type="Int32" Name="idProducto" Nullable="false" />
+    <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="precioUnitario" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="total" Nullable="false" Precision="18" Scale="0" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
+    <Property Type="String" Name="producto" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="paCompraListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="idProveedor" Nullable="false" />
+    <Property Type="Int32" Name="transaccion" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
+    <Property Type="String" Name="proveedor" Nullable="false" MaxLength="100" />
   </ComplexType>
   <ComplexType Name="paEmpleadoListar_Result">
     <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
@@ -391,46 +278,39 @@
     <Property Type="String" Name="segundoApellido" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="direccion" Nullable="false" MaxLength="250" />
     <Property Type="Int64" Name="celular" Nullable="false" />
-    <Property Type="String" Name="email" Nullable="true" MaxLength="100" />
     <Property Type="String" Name="cargo" Nullable="false" MaxLength="50" />
-    <Property Type="DateTime" Name="fechaContratacion" Nullable="false" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
   <ComplexType Name="paMarcaListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="pais" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
-    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="250" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
   <ComplexType Name="paProductoListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="String" Name="codigo" Nullable="false" MaxLength="20" />
-    <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
-    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="250" />
     <Property Type="Int32" Name="idCategoria" Nullable="false" />
     <Property Type="Int32" Name="idMarca" Nullable="false" />
-    <Property Type="String" Name="modelo" Nullable="true" MaxLength="50" />
-    <Property Type="Decimal" Name="stock" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="precioCompra" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="unidadMedida" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="saldo" Nullable="false" Precision="18" Scale="0" />
     <Property Type="Decimal" Name="precioVenta" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Int32" Name="garantiaMeses" Nullable="true" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
-    <Property Type="String" Name="categoria" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="marca" Nullable="false" MaxLength="50" />
   </ComplexType>
-  <ComplexType Name="paReporteVentas_Result">
+  <ComplexType Name="paProveedorListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="String" Name="numeroFactura" Nullable="false" MaxLength="20" />
-    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
-    <Property Type="String" Name="cliente" Nullable="false" MaxLength="91" />
-    <Property Type="String" Name="vendedor" Nullable="false" MaxLength="20" />
-    <Property Type="Decimal" Name="total" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="String" Name="tipoPago" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="nit" Nullable="false" />
+    <Property Type="String" Name="razonSocial" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="telefono" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="representante" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
 </Schema>

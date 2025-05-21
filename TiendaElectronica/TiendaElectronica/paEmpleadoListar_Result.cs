@@ -21,9 +21,7 @@ namespace TiendaElectronica
         public string segundoApellido { get; set; }
         public string direccion { get; set; }
         public long celular { get; set; }
-        public string email { get; set; }
         public string cargo { get; set; }
-        public System.DateTime fechaContratacion { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }

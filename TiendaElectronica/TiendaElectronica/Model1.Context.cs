@@ -28,7 +28,6 @@ namespace TiendaElectronica
         }
     
         public virtual DbSet<Categoria> Categoria { get; set; }
-        public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Compra> Compra { get; set; }
         public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
@@ -36,8 +35,6 @@ namespace TiendaElectronica
         public virtual DbSet<Producto> Producto { get; set; }
         public virtual DbSet<Proveedor> Proveedor { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<Venta> Venta { get; set; }
-        public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
     
         public virtual ObjectResult<paCategoriaListar_Result> paCategoriaListar(string parametro)
         {
@@ -46,6 +43,24 @@ namespace TiendaElectronica
                 new ObjectParameter("parametro", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCategoriaListar_Result>("paCategoriaListar", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paCompraDetalleListar_Result> paCompraDetalleListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCompraDetalleListar_Result>("paCompraDetalleListar", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paCompraListar_Result> paCompraListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCompraListar_Result>("paCompraListar", parametroParameter);
         }
     
         public virtual ObjectResult<paEmpleadoListar_Result> paEmpleadoListar(string parametro)
@@ -75,17 +90,13 @@ namespace TiendaElectronica
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoListar_Result>("paProductoListar", parametroParameter);
         }
     
-        public virtual ObjectResult<paReporteVentas_Result> paReporteVentas(Nullable<System.DateTime> fechaInicio, Nullable<System.DateTime> fechaFin)
+        public virtual ObjectResult<paProveedorListar_Result> paProveedorListar(string parametro)
         {
-            var fechaInicioParameter = fechaInicio.HasValue ?
-                new ObjectParameter("fechaInicio", fechaInicio) :
-                new ObjectParameter("fechaInicio", typeof(System.DateTime));
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
     
-            var fechaFinParameter = fechaFin.HasValue ?
-                new ObjectParameter("fechaFin", fechaFin) :
-                new ObjectParameter("fechaFin", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paReporteVentas_Result>("paReporteVentas", fechaInicioParameter, fechaFinParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProveedorListar_Result>("paProveedorListar", parametroParameter);
         }
     }
 }

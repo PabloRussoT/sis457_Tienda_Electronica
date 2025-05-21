@@ -1,5 +1,6 @@
 ﻿
 using ClnTiendaElectronica;
+using CpTiendaElectronica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,9 +58,9 @@ namespace CpTiendaElectronica
                     txtUsuario.Focus();
                     txtUsuario.SelectAll();
                     Hide();
-                    new Frm(this).ShowDialog();
+                    new FrmPrincipal(this).ShowDialog();
                 }
-                else 
+                else
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Minerva - Mensaje :::",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);

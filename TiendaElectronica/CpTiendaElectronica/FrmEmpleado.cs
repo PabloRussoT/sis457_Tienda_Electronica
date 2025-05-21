@@ -78,7 +78,22 @@ namespace CpTiendaElectronica
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            esNuevo = false;
+            Size = new Size(835, 487);
 
+            int index = dgvLista.CurrentCell.RowIndex;
+            int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
+            var empleado = EmpleadoCln.obtenerUno(id);
+            var usuario = empleado.Usuario.Count > 0 ? empleado.Usuario.First().usuario1 : "";
+            txtCedulaIdentidad.Text = empleado.cedulaIdentidad;
+            txtNombres.Text = empleado.nombres;
+            txtPrimerApellido.Text = empleado.primerApellido;
+            txtSegundoApellido.Text = empleado.segundoApellido;
+            txtDireccion.Text = empleado.direccion;
+            txtCelular.Text = empleado.celular.ToString();
+            txtUsuario.Text = usuario;
+            cbxCargo.Text = empleado.cargo;
+            txtCedulaIdentidad.Focus();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

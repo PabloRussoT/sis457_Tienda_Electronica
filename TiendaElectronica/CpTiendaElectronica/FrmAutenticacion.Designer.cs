@@ -47,7 +47,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(12, 4);
@@ -103,7 +103,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CpTiendaElectronica.Properties.Resources.security_lock;
+           // this.pictureBox1.Image = global::CpTiendaElectronica.Properties.Resources.security_lock;
             this.pictureBox1.Location = new System.Drawing.Point(270, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 116);
@@ -113,7 +113,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Image = global::CpTiendaElectronica.Properties.Resources.login_ok;
+           // this.btnIngresar.Image = global::CpTiendaElectronica.Properties.Resources.login_ok;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIngresar.Location = new System.Drawing.Point(64, 111);
             this.btnIngresar.Name = "btnIngresar";
@@ -127,7 +127,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Image = global::CpTiendaElectronica.Properties.Resources.close;
+            //this.btnSalir.Image = global::CpTiendaElectronica.Properties.Resources.close;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(176, 111);
             this.btnSalir.Name = "btnSalir";
