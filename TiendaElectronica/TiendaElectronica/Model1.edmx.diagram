@@ -4,21 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0617c1f3d5c84db89f3875825d0b86a8" Name="Diagram1">
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Categoria" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Compra" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.CompraDetalle" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Empleado" Width="1.5" PointX="5.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Marca" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Producto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Proveedor" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Usuario" Width="1.5" PointX="8" PointY="6.375" IsExpanded="true" />
+      <Diagram DiagramId="39df0d2ebf154e108e57d513ee190813" Name="Diagram1">
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Categoria" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Compra" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.CompraDetalle" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Empleado" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Marca" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Producto" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Proveedor" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Usuario" Width="1.5" PointX="6" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Venta" Width="1.5" PointX="6" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.VentaDetalle" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_Compra_Proveedor" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_CompraDetalle_Compra" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_CompraDetalle_Producto" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_Usuario_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="TiendaElectronicaModel.fk_Venta_Empleado" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_Producto_Marca" ManuallyRouted="false" />
+        <AssociationConnector Association="TiendaElectronicaModel.fk_VentaDetalle_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="TiendaElectronicaModel.fk_VentaDetalle_Venta" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

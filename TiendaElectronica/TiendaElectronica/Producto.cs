@@ -18,6 +18,7 @@ namespace TiendaElectronica
         public Producto()
         {
             this.CompraDetalle = new HashSet<CompraDetalle>();
+            this.VentaDetalle = new HashSet<VentaDetalle>();
         }
     
         public int id { get; set; }
@@ -36,5 +37,7 @@ namespace TiendaElectronica
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompraDetalle> CompraDetalle { get; set; }
         public virtual Marca Marca { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
     }
 }
