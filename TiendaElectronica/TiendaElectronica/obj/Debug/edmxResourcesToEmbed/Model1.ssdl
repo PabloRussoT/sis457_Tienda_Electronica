@@ -9,6 +9,22 @@
     <Property Name="descripcion" Type="varchar" MaxLength="250" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nit" Type="bigint" />
+    <Property Name="nombreCompleto" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="250" />
+    <Property Name="telefono" Type="varchar" MaxLength="15" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="estado" Type="smallint" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Compra">
     <Key>
       <PropertyRef Name="id" />
@@ -113,6 +129,7 @@
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
+    <Property Name="idCliente" Type="int" />
   </EntityType>
   <EntityType Name="VentaDetalle">
     <Key>
@@ -200,6 +217,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_Venta_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_Venta_Empleado">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
@@ -239,6 +268,9 @@
   <Function Name="paCategoriaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="paClienteListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="parametro" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="paCompraDetalleListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
@@ -265,6 +297,7 @@
   </Function>
   <EntityContainer Name="TiendaElectronicaModelStoreContainer">
     <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Compra" EntityType="Self.Compra" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CompraDetalle" EntityType="Self.CompraDetalle" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
@@ -297,6 +330,10 @@
     <AssociationSet Name="fk_Usuario_Empleado" Association="Self.fk_Usuario_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Venta_Cliente" Association="Self.fk_Venta_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Venta" EntitySet="Venta" />
     </AssociationSet>
     <AssociationSet Name="fk_Venta_Empleado" Association="Self.fk_Venta_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />

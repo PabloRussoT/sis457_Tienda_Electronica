@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CpTiendaElectronica.Properties
+namespace CpTiendaElectronica.Properties.Resources
 {
     using System;
 

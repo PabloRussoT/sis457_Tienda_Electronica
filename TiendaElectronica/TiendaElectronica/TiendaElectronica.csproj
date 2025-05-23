@@ -57,6 +57,9 @@
     <Compile Include="Categoria.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cliente.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Compra.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -85,6 +88,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="paCategoriaListar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paClienteListar_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="paCompraDetalleListar_Result.cs">

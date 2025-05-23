@@ -47,5 +47,5 @@ C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaEle
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\TiendaElectronica.dll.config
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\EntityFramework.xml
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTienda.B7E1FCB5.Up2Date
+C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmCliente.resources
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe.config
-C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.CarritoItem.resources

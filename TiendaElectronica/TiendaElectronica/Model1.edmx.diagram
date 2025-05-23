@@ -4,18 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="39df0d2ebf154e108e57d513ee190813" Name="Diagram1">
+      <Diagram DiagramId="196ac64e096f4a0588707ffdc16eeb1c" Name="Diagram1">
         <EntityTypeShape EntityType="TiendaElectronicaModel.Categoria" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Cliente" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="TiendaElectronicaModel.Compra" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TiendaElectronicaModel.CompraDetalle" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Empleado" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Empleado" Width="1.5" PointX="3.75" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="TiendaElectronicaModel.Marca" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TiendaElectronicaModel.Producto" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TiendaElectronicaModel.Proveedor" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Usuario" Width="1.5" PointX="6" PointY="17.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TiendaElectronicaModel.Venta" Width="1.5" PointX="6" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Usuario" Width="1.5" PointX="6" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TiendaElectronicaModel.Venta" Width="1.5" PointX="6" PointY="15.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TiendaElectronicaModel.VentaDetalle" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_Producto_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="TiendaElectronicaModel.fk_Venta_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_Compra_Proveedor" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_CompraDetalle_Compra" ManuallyRouted="false" />
         <AssociationConnector Association="TiendaElectronicaModel.fk_CompraDetalle_Producto" ManuallyRouted="false" />

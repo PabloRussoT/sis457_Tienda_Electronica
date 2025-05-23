@@ -13,13 +13,13 @@ namespace TiendaElectronica
     
     public partial class paVentaListar_Result
     {
-        public int id { get; set; }
-        public int idEmpleado { get; set; }
-        public System.DateTime fecha { get; set; }
-        public decimal total { get; set; }
-        public string usuarioRegistro { get; set; }
-        public System.DateTime fechaRegistro { get; set; }
-        public short estado { get; set; }
+        public int idVenta { get; set; }
+        public System.DateTime fechaVenta { get; set; }
+        public decimal totalVenta { get; set; }
+        public short estadoVenta { get; set; }
+        public string usuarioVenta { get; set; }
+        public System.DateTime fechaRegistroVenta { get; set; }
         public string empleado { get; set; }
+        public string cliente { get; set; }
     }
 }

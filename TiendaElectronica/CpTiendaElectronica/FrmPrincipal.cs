@@ -38,5 +38,10 @@ namespace CpTiendaElectronica
         {
             new FrmVenta().ShowDialog();
         }
+
+        private void btnCaClientes_Click(object sender, EventArgs e)
+        {
+            new FrmCliente().ShowDialog();
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace TiendaElectronica
         }
     
         public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Compra> Compra { get; set; }
         public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
@@ -45,6 +46,15 @@ namespace TiendaElectronica
                 new ObjectParameter("parametro", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paCategoriaListar_Result>("paCategoriaListar", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paClienteListar_Result> paClienteListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paClienteListar_Result>("paClienteListar", parametroParameter);
         }
     
         public virtual ObjectResult<paCompraDetalleListar_Result> paCompraDetalleListar(string parametro)

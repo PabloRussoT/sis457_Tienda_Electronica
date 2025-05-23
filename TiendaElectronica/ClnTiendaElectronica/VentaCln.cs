@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Existing VentaCln.cs content with VentaDetalleItem updated
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace ClnTiendaElectronica
     public class VentaDetalleItem
     {
         public int IdProducto { get; set; }
+        public string DescripcionProducto { get; set; } // Added for display in FrmVenta
         public decimal Cantidad { get; set; }
         public decimal PrecioUnitario { get; set; }
         public decimal Subtotal { get; set; }
@@ -85,7 +87,7 @@ namespace ClnTiendaElectronica
 
         // Método para registrar una venta completa (cabecera y detalles)
         // y actualizar el stock de productos, usando Entity Framework.
-        public static void insertarVenta(int idEmpleado, List<VentaDetalleItem> detallesVenta)
+        public static void insertarVenta(int idEmpleado, int idClienteActual, List<VentaDetalleItem> detallesVenta)
         {
             using (var context = new TiendaElectronicaEntities())
             {
@@ -141,6 +143,11 @@ namespace ClnTiendaElectronica
                     }
                 }
             }
+        }
+
+        public static void insertarVenta(int idEmpleadoActual, List<VentaDetalleItem> detallesParaVenta)
+        {
+            throw new NotImplementedException();
         }
     }
 }

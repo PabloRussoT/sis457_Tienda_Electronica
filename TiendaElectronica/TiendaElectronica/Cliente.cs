@@ -12,32 +12,30 @@ namespace TiendaElectronica
     using System;
     using System.Collections.Generic;
     
-    public partial class Venta
+    public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Venta()
+        public Cliente()
         {
-            this.VentaDetalle = new HashSet<VentaDetalle>();
+            this.Venta = new HashSet<Venta>();
         }
     
         public int id { get; set; }
-        public int idEmpleado { get; set; }
-        public int IdEmpleado { get; set; }
-        public System.DateTime fecha { get; set; }
-        public DateTime Fecha { get; set; }
-        public decimal total { get; set; }
-        public decimal Total { get; set; }
+        public object Id { get; set; }
+        public Nullable<long> nit { get; set; }
+        public object Nit { get; set; }
+        public string nombreCompleto { get; set; }
+        public object NombreCompleto { get; set; }
+        public string direccion { get; set; }
+        public string telefono { get; set; }
+        public string email { get; set; }
         public string usuarioRegistro { get; set; }
-        public string UsuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
-        public DateTime FechaRegistro { get; set; }
         public short estado { get; set; }
-        public int Estado { get; set; }
-        public Nullable<int> idCliente { get; set; }
-        public object IdCliente { get; set; }
-        public virtual Cliente Cliente { get; set; }
-        public virtual Empleado Empleado { get; set; }
+        public string nombres { get; set; }
+        public string apellidos { get; set; }
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

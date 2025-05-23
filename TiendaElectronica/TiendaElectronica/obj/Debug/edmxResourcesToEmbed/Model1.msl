@@ -11,6 +11,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="TiendaElectronicaModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Compra">
       <EntityTypeMapping TypeName="TiendaElectronicaModel.Compra">
         <MappingFragment StoreEntitySet="Compra">
@@ -121,6 +138,7 @@
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -145,6 +163,23 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paClienteListar" FunctionName="TiendaElectronicaModel.Store.paClienteListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TiendaElectronicaModel.paClienteListar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
         </ComplexTypeMapping>
       </ResultMapping>
@@ -258,14 +293,14 @@
     <FunctionImportMapping FunctionImportName="paVentaListar" FunctionName="TiendaElectronicaModel.Store.paVentaListar">
       <ResultMapping>
         <ComplexTypeMapping TypeName="TiendaElectronicaModel.paVentaListar_Result">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="total" ColumnName="total" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
+          <ScalarProperty Name="fechaVenta" ColumnName="fechaVenta" />
+          <ScalarProperty Name="totalVenta" ColumnName="totalVenta" />
+          <ScalarProperty Name="estadoVenta" ColumnName="estadoVenta" />
+          <ScalarProperty Name="usuarioVenta" ColumnName="usuarioVenta" />
+          <ScalarProperty Name="fechaRegistroVenta" ColumnName="fechaRegistroVenta" />
           <ScalarProperty Name="empleado" ColumnName="empleado" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
