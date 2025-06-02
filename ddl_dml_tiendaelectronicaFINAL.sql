@@ -1,4 +1,4 @@
-Ôªø-- Crear la base de datos y el usuario
+-- Crear la base de datos y el usuario
 CREATE DATABASE TiendaElectrica;
 GO
 USE [master]
@@ -180,11 +180,11 @@ BEGIN
     ORDER BY cd.estado DESC, pr.descripcion ASC;
 END;
 -- Insertar datos iniciales
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Herramientas', 'Herramientas manuales y el√©ctricas');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Iluminaci√≥n', 'Bombillas, l√°mparas y accesorios de iluminaci√≥n');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Herramientas', 'Herramientas manuales y elÈctricas');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('IluminaciÛn', 'Bombillas, l·mparas y accesorios de iluminaciÛn');
 
-INSERT INTO Marca (nombre, descripcion) VALUES ('Bosch', 'Herramientas el√©ctricas de alta calidad');
-INSERT INTO Marca (nombre, descripcion) VALUES ('Philips', 'Productos de iluminaci√≥n y tecnolog√≠a avanzada');
+INSERT INTO Marca (nombre, descripcion) VALUES ('Bosch', 'Herramientas elÈctricas de alta calidad');
+INSERT INTO Marca (nombre, descripcion) VALUES ('Philips', 'Productos de iluminaciÛn y tecnologÌa avanzada');
 
 INSERT INTO Producto (idCategoria, idMarca, codigo, descripcion, unidadMedida, saldo, precioVenta)
 VALUES (1, 1, 'H001', 'Taladro Bosch 500W', 'Unidad', 10, 150);
@@ -321,7 +321,7 @@ BEGIN
         v.estado AS estadoVenta,
         v.usuarioRegistro AS usuarioVenta,
         v.fechaRegistro AS fechaRegistroVenta,
-        -- Concatenaci√≥n del nombre completo del empleado
+        -- ConcatenaciÛn del nombre completo del empleado
         e.nombres + ' ' + ISNULL(e.primerApellido, '') + ' ' + ISNULL(e.segundoApellido, '') AS empleado,
         -- Nombre completo del cliente
         c.nombreCompleto AS cliente

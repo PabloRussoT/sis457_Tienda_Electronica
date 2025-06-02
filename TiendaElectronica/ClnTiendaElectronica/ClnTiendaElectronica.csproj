@@ -56,13 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaCln.cs" />
     <Compile Include="ClienteCln.cs" />
     <Compile Include="CompraDetalleCln.cs" />
     <Compile Include="EmpleadoCln.cs" />
+    <Compile Include="MarcaCln.cs" />
     <Compile Include="ProductoCln.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioCln.cs" />
     <Compile Include="VentaCln.cs" />
+    <Compile Include="VentaDetalleCln.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TiendaElectronica\TiendaElectronica.csproj">

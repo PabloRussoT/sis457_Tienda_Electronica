@@ -1,27 +1,15 @@
-﻿// Existing VentaCln.cs content with VentaDetalleItem updated
+﻿// ClnTiendaElectronica\VentaCln.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TiendaElectronica; // Asegúrate de que este namespace apunte a tu modelo de Entity Framework
+using TiendaElectronica; // IMPORTANT: This references the shared VentaDetalle and EF models
 
 namespace ClnTiendaElectronica
 {
-    // Clase para representar un detalle de venta en la lógica de negocio
-    // Esta clase es pública para ser accesible desde FrmVenta
-    public class VentaDetalleItem
-    {
-        public int IdProducto { get; set; }
-        public string DescripcionProducto { get; set; } // Added for display in FrmVenta
-        public decimal Cantidad { get; set; }
-        public decimal PrecioUnitario { get; set; }
-        public decimal Subtotal { get; set; }
-    }
-
     public class VentaCln
     {
-        // Cambiado de 'internal' a 'public' para que sea accesible desde FrmVenta
         public static int insertar(Venta venta)
         {
             using (var context = new TiendaElectronicaEntities())
@@ -85,13 +73,18 @@ namespace ClnTiendaElectronica
             }
         }
 
-        // Método para registrar una venta completa (cabecera y detalles)
-        // y actualizar el stock de productos, usando Entity Framework.
-        public static void insertarVenta(int idEmpleado, int idClienteActual, List<VentaDetalleItem> detallesVenta)
+        /// <summary>
+        /// Registra una venta completa (cabecera y detalles) y actualiza el stock de los productos vendidos.
+        /// Esta operación se realiza dentro de una transacción para asegurar la consistencia de los datos.
+        /// </summary>
+        /// <param name="idEmpleado">El ID del empleado que realiza la venta.</param>
+        /// <param name="idClienteActual">El ID del cliente al que se le realiza la venta.</param>
+        /// <param name="fechaVenta">La fecha de la venta.</param>
+        /// <param name="detallesVenta">Una lista de objetos VentaDetalle que representan los productos y cantidades vendidas.</param>
+        public static void insertarVenta(int idEmpleado, int idClienteActual, DateTime fechaVenta, List<TiendaElectronica.VentaDetalle> detallesVenta)
         {
             using (var context = new TiendaElectronicaEntities())
             {
-                // Iniciar una transacción de Entity Framework
                 using (var transaction = context.Database.BeginTransaction())
                 {
                     try
@@ -100,16 +93,16 @@ namespace ClnTiendaElectronica
                         Venta nuevaVenta = new Venta
                         {
                             idEmpleado = idEmpleado,
-                            fecha = DateTime.Now,
+                            idCliente = idClienteActual,
+                            fecha = fechaVenta, // Use the provided fechaVenta
                             total = detallesVenta.Sum(d => d.Subtotal),
-                            usuarioRegistro = Environment.UserName, // O el usuario loggeado
+                            usuarioRegistro = Environment.UserName,
                             fechaRegistro = DateTime.Now,
                             estado = 1
                         };
                         context.Venta.Add(nuevaVenta);
-                        context.SaveChanges(); // Guarda la venta para obtener su ID
+                        context.SaveChanges();
 
-                        // Obtener el ID de la venta recién insertada
                         int idVenta = nuevaVenta.id;
 
                         // 2. Insertar los detalles de la venta y actualizar el stock de productos
@@ -122,32 +115,32 @@ namespace ClnTiendaElectronica
                                 cantidad = detalle.Cantidad,
                                 precioUnitario = detalle.PrecioUnitario,
                                 total = detalle.Subtotal,
-                                usuarioRegistro = Environment.UserName, // O el usuario loggeado
+                                usuarioRegistro = Environment.UserName,
                                 fechaRegistro = DateTime.Now,
                                 estado = 1
                             };
                             context.VentaDetalle.Add(nuevoDetalle);
 
-                            // Actualizar el saldo del producto usando el método en ProductoCln
+                            // Assuming ProductoCln.actualizarSaldo subtracts the quantity
                             ProductoCln.actualizarSaldo(detalle.IdProducto, detalle.Cantidad);
                         }
 
-                        context.SaveChanges(); // Guarda los detalles de venta y los cambios de saldo
-                        transaction.Commit(); // Confirmar la transacción si todo fue exitoso
+                        context.SaveChanges();
+                        transaction.Commit();
                     }
                     catch (Exception ex)
                     {
-                        transaction.Rollback(); // Revertir la transacción en caso de error
-                        Console.WriteLine("Error al insertar venta: " + ex.Message);
-                        throw; // Relanzar la excepción
+                        transaction.Rollback();
+                        Console.WriteLine("Error al insertar venta en VentaCln: " + ex.Message);
+                        throw; // Re-throw the exception to be caught in FrmVenta
                     }
                 }
             }
         }
-
-        public static void insertarVenta(int idEmpleadoActual, List<VentaDetalleItem> detallesParaVenta)
-        {
-            throw new NotImplementedException();
-        }
+        // REMOVED THE UNIMPLEMENTED OVERLOAD:
+        // public static void insertarVenta(int idEmpleadoActual, int idCliente, List<VentaDetalle> ventaDetalles)
+        // {
+        //     throw new NotImplementedException();
+        // }
     }
 }

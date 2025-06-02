@@ -118,6 +118,9 @@
     <EmbeddedResource Include="FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmVenta.resx">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,9 +151,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\account_login_log_in_icon_250759.png" />
+    <None Include="Resources\account_login_log_in_icon_250759 %281%29.png" />
     <Content Include="Resources\cancel.png" />
     <Content Include="Resources\clients.png" />
     <Content Include="Resources\close.png" />
+    <None Include="Resources\customer_person_people_man_you_1625.png" />
     <Content Include="Resources\delete.png" />
     <Content Include="Resources\edit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

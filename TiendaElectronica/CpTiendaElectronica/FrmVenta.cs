@@ -5,17 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using ClnTiendaElectronica; // Lógica de negocio
-using TiendaElectronica;     // Entidades del modelo
+using ClnTiendaElectronica; // Lógica de negocio (where VentaCln, ProductoCln, ClienteCln are)
+using TiendaElectronica;    // IMPORTANT: This now brings in the shared VentaDetalle
 
 namespace CpTiendaElectronica
 {
     public partial class FrmVenta : Form
     {
-        // Lista para manejar los ítems del carrito de compras
-        private List<VentaDetalleItem> detallesVenta = new List<VentaDetalleItem>();
+        // MEJORA: Usar BindingList<T> para que el DataGridView se actualice automáticamente.
+        // Ahora refiere a TiendaElectronica.VentaDetalle, la definición única y compartida.
+        private BindingList<TiendaElectronica.VentaDetalle> detallesVenta = new BindingList<TiendaElectronica.VentaDetalle>();
+
         // Asumimos que el ID del empleado se obtiene de la sesión actual
-        // Para este ejemplo, lo dejaremos como un valor fijo.
         private int idEmpleadoActual = 1;
 
         public FrmVenta()
@@ -28,37 +29,75 @@ namespace CpTiendaElectronica
             CargarClientes();
             CargarProductos();
             ConfigurarColumnasCarrito();
+            dgvCarrito.DataSource = detallesVenta;
+            CalcularTotal();
         }
 
         private void CargarClientes()
         {
-            // Carga los clientes en el ComboBox
-            cbxClientes.DataSource = ClienteCln.listar();
-            cbxClientes.DisplayMember = "nombreCompleto";
-            cbxClientes.ValueMember = "id";
+            try
+            {
+                var clientes = ClienteCln.listar();
+                if (clientes != null && clientes.Any())
+                {
+                    cbxClientes.DataSource = clientes;
+                    cbxClientes.DisplayMember = "nombreCompleto";
+                    cbxClientes.ValueMember = "id";
+                    cbxClientes.SelectedIndex = -1;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron clientes para cargar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cbxClientes.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar clientes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CargarProductos(string parametro = "")
         {
-            // Carga productos usando el procedimiento almacenado para búsqueda
-            dgvListaProductos.DataSource = ProductoCln.listarPa(parametro);
-            dgvListaProductos.Columns["id"].Visible = false; // Ocultar ID
-            dgvListaProductos.Columns["usuarioRegistro"].Visible = false;
-            dgvListaProductos.Columns["fechaRegistro"].Visible = false;
-            dgvListaProductos.Columns["estado"].Visible = false;
+            try
+            {
+                var productos = ProductoCln.listarPa(parametro);
+
+                var productosParaMostrar = productos.Select(p => new
+                {
+                    ID = p.id,
+                    Descripcion = p.descripcion,
+                    Stock = p.saldo,
+                    PrecioVenta = p.precioVenta
+                }).ToList();
+
+                dgvListaProductos.DataSource = productosParaMostrar;
+
+                if (dgvListaProductos.Columns.Contains("ID")) dgvListaProductos.Columns["ID"].HeaderText = "Código";
+                if (dgvListaProductos.Columns.Contains("Descripcion")) dgvListaProductos.Columns["Descripcion"].HeaderText = "Descripción del Producto";
+                if (dgvListaProductos.Columns.Contains("Stock")) dgvListaProductos.Columns["Stock"].HeaderText = "Cantidad Disponible";
+                if (dgvListaProductos.Columns.Contains("PrecioVenta")) dgvListaProductos.Columns["PrecioVenta"].HeaderText = "Precio Unitario";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar productos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ConfigurarColumnasCarrito()
         {
-            // Configura las columnas del DataGridView del carrito
             dgvCarrito.Columns.Clear();
             dgvCarrito.AutoGenerateColumns = false;
 
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "IdProducto", HeaderText = "ID Producto", Visible = false });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "DescripcionProducto", HeaderText = "Producto", Width = 300 });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Cantidad", HeaderText = "Cantidad" });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "PrecioUnitario", HeaderText = "Precio Unit." });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "Subtotal", HeaderText = "Subtotal" });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "IdProducto", DataPropertyName = "IdProducto", HeaderText = "ID Producto", Visible = false });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "DescripcionProducto", DataPropertyName = "DescripcionProducto", HeaderText = "Producto", Width = 300 });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "Cantidad", DataPropertyName = "Cantidad", HeaderText = "Cantidad" });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "PrecioUnitario", DataPropertyName = "PrecioUnitario", HeaderText = "Precio Unit." });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "Subtotal", DataPropertyName = "Subtotal", HeaderText = "Subtotal" });
+
+            dgvCarrito.Columns["PrecioUnitario"].DefaultCellStyle.Format = "N2";
+            dgvCarrito.Columns["Subtotal"].DefaultCellStyle.Format = "N2";
         }
 
         private void txtBusquedaProducto_TextChanged(object sender, EventArgs e)
@@ -70,68 +109,61 @@ namespace CpTiendaElectronica
         {
             if (dgvListaProductos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar un producto de la lista.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un producto de la lista para agregar al carrito.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             var filaSeleccionada = dgvListaProductos.SelectedRows[0];
-            int idProducto = (int)filaSeleccionada.Cells["id"].Value;
-            string descripcionProducto = filaSeleccionada.Cells["descripcion"].Value.ToString();
-            decimal precioVenta = (decimal)filaSeleccionada.Cells["precioVenta"].Value;
-            decimal saldoDisponible = (decimal)filaSeleccionada.Cells["saldo"].Value;
+            int idProducto = (int)filaSeleccionada.Cells["ID"].Value;
+            string descripcionProducto = filaSeleccionada.Cells["Descripcion"].Value.ToString();
+            decimal precioVenta = (decimal)filaSeleccionada.Cells["PrecioVenta"].Value;
+            decimal saldoDisponible = (decimal)filaSeleccionada.Cells["Stock"].Value;
+
             decimal cantidadAAgregar = nudCantidad.Value;
 
-            // Verificar si el producto ya está en el carrito
+            if (cantidadAAgregar <= 0)
+            {
+                MessageBox.Show("La cantidad a agregar debe ser mayor que cero.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var itemExistente = detallesVenta.FirstOrDefault(p => p.IdProducto == idProducto);
 
             if (itemExistente != null)
             {
-                // Si el producto ya existe en el carrito, verificamos el saldo contra la cantidad total que habrá
-                if (itemExistente.Cantidad + cantidadAAgregar > saldoDisponible)
+                // Calculate potential new total quantity
+                decimal nuevaCantidadTotal = itemExistente.Cantidad + cantidadAAgregar;
+
+                if (nuevaCantidadTotal > saldoDisponible)
                 {
-                    MessageBox.Show("La cantidad solicitada excede el stock disponible para este producto.", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"La cantidad total ({nuevaCantidadTotal}) excede el stock disponible ({saldoDisponible}).", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                itemExistente.Cantidad += cantidadAAgregar;
-                itemExistente.Subtotal = itemExistente.Cantidad * itemExistente.PrecioUnitario;
+                itemExistente.Cantidad = nuevaCantidadTotal; // Update the quantity
+                // Corrected: Calculate subtotal with decimal precision. PrecioUnitario remains the same.
+                itemExistente.Subtotal = (int)(itemExistente.Cantidad * itemExistente.PrecioUnitario);
             }
             else
             {
-                // Si es un producto nuevo en el carrito, solo verificamos contra el saldo
                 if (cantidadAAgregar > saldoDisponible)
                 {
-                    MessageBox.Show("La cantidad solicitada excede el stock disponible para este producto.", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"La cantidad solicitada ({cantidadAAgregar}) excede el stock disponible ({saldoDisponible}).", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                // Añadir nuevo item al carrito
-                var nuevoItem = new VentaDetalleItem
+                var nuevoItem = new TiendaElectronica.VentaDetalle
                 {
                     IdProducto = idProducto,
                     DescripcionProducto = descripcionProducto,
                     Cantidad = cantidadAAgregar,
                     PrecioUnitario = precioVenta,
-                    Subtotal = cantidadAAgregar * precioVenta
+                    // Corrected: Calculate subtotal with decimal precision.
+                    Subtotal = (int)(cantidadAAgregar * precioVenta)
                 };
                 detallesVenta.Add(nuevoItem);
             }
 
             ActualizarCarrito();
-            nudCantidad.Value = 1; // Resetear cantidad
-        }
-
-        private void ActualizarCarrito()
-        {
-            // Refresca el DataGridView del carrito y calcula el total
-            dgvCarrito.DataSource = null; // Desvincular para actualizar correctamente
-            dgvCarrito.DataSource = detallesVenta.ToList(); // Volver a vincular la lista
-
-            CalcularTotal();
-        }
-
-        private void CalcularTotal()
-        {
-            decimal total = detallesVenta.Sum(d => d.Subtotal);
-            lblTotalValor.Text = $"S/. {total:N2}";
+            nudCantidad.Value = 1;
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
@@ -142,60 +174,74 @@ namespace CpTiendaElectronica
                 return;
             }
 
-            int idProductoEliminar = (int)dgvCarrito.SelectedRows[0].Cells["IdProducto"].Value;
-            var itemAEliminar = detallesVenta.FirstOrDefault(p => p.IdProducto == idProductoEliminar);
-
-            if (itemAEliminar != null)
+            if (dgvCarrito.SelectedRows[0].DataBoundItem is TiendaElectronica.VentaDetalle itemAEliminar)
             {
                 detallesVenta.Remove(itemAEliminar);
                 ActualizarCarrito();
             }
+            else
+            {
+                MessageBox.Show("No se pudo obtener el producto seleccionado para eliminar. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ActualizarCarrito()
+        {
+            CalcularTotal();
+        }
+
+        private void CalcularTotal()
+        {
+            decimal total = detallesVenta.Sum(d => d.Subtotal);
+            lblTotalValor.Text = $"S/. {total:N2}";
         }
 
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
             if (cbxClientes.SelectedValue == null)
             {
-                MessageBox.Show("Debe seleccionar un cliente.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un cliente para registrar la venta.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (detallesVenta.Count == 0)
             {
-                MessageBox.Show("El carrito de compras está vacío.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El carrito de compras está vacío. Agregue productos para registrar una venta.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
                 int idCliente = (int)cbxClientes.SelectedValue;
-                // Llamar al método de la capa de negocio para insertar la venta y sus detalles
-                VentaCln.insertarVenta(idEmpleadoActual, idCliente, detallesVenta);
+                DateTime fechaVenta = dtpFechaVenta.Value; // Get the date from the DateTimePicker
+
+                // Call the correct insertarVenta overload with fechaVenta
+                VentaCln.insertarVenta(idEmpleadoActual, idCliente, fechaVenta, detallesVenta.ToList());
 
                 MessageBox.Show("Venta registrada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LimpiarFormulario();
-                CargarProductos(); // Recargar productos para reflejar el nuevo stock
-
+                CargarProductos(); // Reload products to reflect stock changes
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error al registrar la venta: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ocurrió un error al registrar la venta: {ex.Message}\n\nDetalles técnicos:\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void LimpiarFormulario()
         {
             detallesVenta.Clear();
-            ActualizarCarrito();
+            CalcularTotal();
             txtBusquedaProducto.Clear();
-            cbxClientes.SelectedIndex = 0;
+            cbxClientes.SelectedIndex = -1;
             nudCantidad.Value = 1;
+            dtpFechaVenta.Value = DateTime.Now; // Reset date to current date
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que desea cancelar la venta actual?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que desea cancelar la venta actual? Se perderán todos los productos en el carrito.", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 LimpiarFormulario();
             }

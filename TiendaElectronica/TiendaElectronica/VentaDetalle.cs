@@ -17,8 +17,11 @@ namespace TiendaElectronica
         public int id { get; set; }
         public int idVenta { get; set; }
         public int idProducto { get; set; }
+        public int IdProducto { get; set; }
         public decimal cantidad { get; set; }
+        public decimal Cantidad { get; set; }
         public decimal precioUnitario { get; set; }
+        public decimal PrecioUnitario { get; set; }
         public decimal total { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
@@ -26,5 +29,7 @@ namespace TiendaElectronica
     
         public virtual Producto Producto { get; set; }
         public virtual Venta Venta { get; set; }
+        public int Subtotal { get; set; }
+        public string DescripcionProducto { get; set; }
     }
 }
