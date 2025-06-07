@@ -14,6 +14,8 @@ namespace TiendaElectronica
     
     public partial class Venta
     {
+        public DateTime fechaVenta;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Venta()
         {
@@ -22,19 +24,13 @@ namespace TiendaElectronica
     
         public int id { get; set; }
         public int idEmpleado { get; set; }
-        public int IdEmpleado { get; set; }
         public System.DateTime fecha { get; set; }
-        public DateTime Fecha { get; set; }
         public decimal total { get; set; }
-        public decimal Total { get; set; }
         public string usuarioRegistro { get; set; }
-        public string UsuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
-        public DateTime FechaRegistro { get; set; }
         public short estado { get; set; }
-        public int Estado { get; set; }
         public Nullable<int> idCliente { get; set; }
-        public object IdCliente { get; set; }
+    
         public virtual Cliente Cliente { get; set; }
         public virtual Empleado Empleado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

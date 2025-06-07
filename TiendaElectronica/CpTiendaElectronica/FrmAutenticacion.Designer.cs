@@ -65,7 +65,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(135, 60);
             this.txtUsuario.MaxLength = 20;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(156, 23);
+            this.txtUsuario.Size = new System.Drawing.Size(156, 27);
             this.txtUsuario.TabIndex = 5;
             // 
             // lblUsuario
@@ -75,7 +75,7 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblUsuario.Location = new System.Drawing.Point(50, 63);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(61, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(72, 20);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -86,7 +86,7 @@
             this.txtClave.MaxLength = 30;
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(156, 23);
+            this.txtClave.Size = new System.Drawing.Size(156, 27);
             this.txtClave.TabIndex = 7;
             this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
@@ -97,7 +97,7 @@
             this.lblClave.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblClave.Location = new System.Drawing.Point(20, 98);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(85, 17);
+            this.lblClave.Size = new System.Drawing.Size(100, 20);
             this.lblClave.TabIndex = 6;
             this.lblClave.Text = "Contraseña:";
             // 
@@ -163,10 +163,9 @@
             // 
             // FrmAutenticacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.BackgroundImage = global::CpTiendaElectronica.Properties.Resources.electronics_merchandising_computer_displays;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(421, 204);
             this.Controls.Add(this.pictureBox1);

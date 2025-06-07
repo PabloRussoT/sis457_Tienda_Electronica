@@ -71,8 +71,10 @@ namespace CpTiendaElectronica
                 p.usuarioRegistro,
                 p.fechaRegistro,
                 // Assuming paProductoListar_Result directly returns these columns
-                Categoria = p.CategoriaNombre, // Corrected to use a direct column from SP result if available
-                Marca = p.MarcaNombre          // Corrected to use a direct column from SP result if available
+               // Categoria = p.CategoriaNombre, // Corrected to use a direct column from SP result if available
+                //Marca = p.MarcaNombre  ,        // Corrected to use a direct column from SP result if available
+             //   p.MarcaNombre,
+               // p.CategoriaNombre
             }).ToList();
 
             dgvLista.Columns["id"].Visible = false;
@@ -84,8 +86,9 @@ namespace CpTiendaElectronica
             dgvLista.Columns["precioVenta"].HeaderText = "Precio de Venta";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
-            dgvLista.Columns["Categoria"].HeaderText = "Categoría";
-            dgvLista.Columns["Marca"].HeaderText = "Marca";
+           // dgvLista.Columns["MarcaNombre"].HeaderText = "MarcaNombre";
+           // dgvLista.Columns["CategoriaNombre"].HeaderText = "CategoriaNombre";
+            
 
             if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["codigo"];
             btnEditar.Enabled = lista.Count > 0;

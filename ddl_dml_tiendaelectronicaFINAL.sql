@@ -180,11 +180,11 @@ BEGIN
     ORDER BY cd.estado DESC, pr.descripcion ASC;
 END;
 -- Insertar datos iniciales
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Herramientas', 'Herramientas manuales y eléctricas');
-INSERT INTO Categoria (nombre, descripcion) VALUES ('Iluminación', 'Bombillas, lámparas y accesorios de iluminación');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Herramientas', 'Herramientas manuales y elï¿½ctricas');
+INSERT INTO Categoria (nombre, descripcion) VALUES ('Iluminaciï¿½n', 'Bombillas, lï¿½mparas y accesorios de iluminaciï¿½n');
 
-INSERT INTO Marca (nombre, descripcion) VALUES ('Bosch', 'Herramientas eléctricas de alta calidad');
-INSERT INTO Marca (nombre, descripcion) VALUES ('Philips', 'Productos de iluminación y tecnología avanzada');
+INSERT INTO Marca (nombre, descripcion) VALUES ('Bosch', 'Herramientas elï¿½ctricas de alta calidad');
+INSERT INTO Marca (nombre, descripcion) VALUES ('Philips', 'Productos de iluminaciï¿½n y tecnologï¿½a avanzada');
 
 INSERT INTO Producto (idCategoria, idMarca, codigo, descripcion, unidadMedida, saldo, precioVenta)
 VALUES (1, 1, 'H001', 'Taladro Bosch 500W', 'Unidad', 10, 150);
@@ -197,6 +197,8 @@ VALUES ('8765432', 'Maria', 'Gomez', 'Fernandez', 'Av. Las Americas 123', 765432
 
 INSERT INTO Usuario (idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==' );
+INSERT INTO Usuario (idEmpleado, usuario, clave)
+VALUES (1, 'pablo', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 
 SELECT * FROM Producto;
@@ -321,7 +323,7 @@ BEGIN
         v.estado AS estadoVenta,
         v.usuarioRegistro AS usuarioVenta,
         v.fechaRegistro AS fechaRegistroVenta,
-        -- Concatenación del nombre completo del empleado
+        -- Concatenaciï¿½n del nombre completo del empleado
         e.nombres + ' ' + ISNULL(e.primerApellido, '') + ' ' + ISNULL(e.segundoApellido, '') AS empleado,
         -- Nombre completo del cliente
         c.nombreCompleto AS cliente
@@ -361,3 +363,25 @@ SELECT * FROM Cliente;
 SELECT * FROM Venta;
 SELECT * FROM VentaDetalle;
 
+INSERT INTO Categoria (nombre, descripcion, estado) VALUES
+('ElectrÃ³nica', 'Dispositivos y componentes electrÃ³nicos', 1),
+('InformÃ¡tica', 'Hardware y software para computadoras', 1),
+('Smartphones', 'TelÃ©fonos inteligentes y accesorios', 1),
+('Accesorios', 'Diversos accesorios para dispositivos electrÃ³nicos', 1),
+('Hogar Inteligente', 'Dispositivos para automatizaciÃ³n del hogar', 1);
+
+INSERT INTO Marca (nombre, descripcion, estado) VALUES
+('Samsung', 'Marca surcoreana lÃ­der en electrÃ³nica', 1),
+('Apple', 'Empresa estadounidense de tecnologÃ­a', 1),
+('Sony', 'Conglomerado multinacional japonÃ©s de electrÃ³nica', 1),
+('Xiaomi', 'Empresa china de electrÃ³nica y software', 1),
+('Logitech', 'Fabricante suizo de perifÃ©ricos de ordenador', 1);
+
+INSERT INTO Producto (idCategoria, idMarca, codigo, descripcion, unidadMedida, saldo, precioVenta, usuarioRegistro, estado) VALUES
+(1, 1, 'TVLED4K-SAM001', 'Televisor Samsung 55" 4K Smart TV', 'Unidad', 15, 799.99, 'AdminUser', 1),
+(2, 2, 'MACB-AIR-M2-002', 'MacBook Air M2 13" 256GB SSD', 'Unidad', 10, 1199.00, 'AdminUser', 1),
+(3, 4, 'REDMI-NOTE12-003', 'Xiaomi Redmi Note 12 Pro 5G', 'Unidad', 50, 299.50, 'AdminUser', 1),
+(4, 5, 'MOUSE-MXM-004', 'Mouse InalÃ¡mbrico Logitech MX Master 3S', 'Unidad', 100, 99.99, 'AdminUser', 1),
+(1, 3, 'AUD-WH1000XM5', 'Auriculares Sony WH-1000XM5 CancelaciÃ³n de Ruido', 'Unidad', 25, 349.00, 'AdminUser', 1);
+
+use TiendaElectronica;

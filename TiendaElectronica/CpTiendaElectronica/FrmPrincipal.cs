@@ -29,10 +29,7 @@ namespace CpTiendaElectronica
             frmAutenticacion.Show();
         }
 
-        private void btnAdEmpleados_Click(object sender, EventArgs e)
-        {
-            new FrmEmpleado().ShowDialog();
-        }
+       
 
         private void btnCVVentas_Click(object sender, EventArgs e)
         {
@@ -42,6 +39,16 @@ namespace CpTiendaElectronica
         private void btnCaClientes_Click(object sender, EventArgs e)
         {
             new FrmCliente().ShowDialog();
+        }
+
+        private void btnCaProveedores_Click(object sender, EventArgs e)
+        {
+            new FrmEmpleado().ShowDialog();
+        }
+
+        private void btnVentaDetalle_Click(object sender, EventArgs e)
+        {
+         new FrmVentaDetalle().ShowDialog();
         }
     }
 }

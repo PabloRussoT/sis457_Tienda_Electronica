@@ -42,7 +42,7 @@ namespace CpTiendaElectronica
                 dgvLista.Columns["nit"].HeaderText = "NIT";
                 dgvLista.Columns["nombres"].HeaderText = "Nombres";
                 dgvLista.Columns["apellidos"].HeaderText = "Apellidos";
-                dgvLista.Columns["nombreCompleto"].HeaderText = "Nombre Completo";
+               dgvLista.Columns["nombreCompleto"].Visible = false;
                 dgvLista.Columns["direccion"].HeaderText = "Dirección";
                 dgvLista.Columns["telefono"].HeaderText = "Teléfono";
                 dgvLista.Columns["email"].HeaderText = "Email";
@@ -185,7 +185,7 @@ namespace CpTiendaElectronica
         private void FrmCliente_Load(object sender, EventArgs e)
         {
             // Ajusta el tamaño inicial del formulario para mostrar solo la tabla de clientes
-            Size = new Size(835, 362);
+            Size = new Size(1131, 400); // Matches FrmProducto initial size
             listar(); // Carga la lista de clientes al iniciar el formulario
         }
 
@@ -204,8 +204,8 @@ namespace CpTiendaElectronica
         {
             esNuevo = true; // Indica que se va a crear un nuevo registro
             // Expande el formulario para mostrar la sección de entrada de datos
-            Size = new Size(835, 500);
-            limpiar();     // Limpia todos los campos
+            Size = new Size(1131, 761); // Matches FrmProducto expanded size
+            limpiar();       // Limpia todos los campos
             txtNit.Focus(); // Pone el foco en el primer campo
         }
 
@@ -213,7 +213,7 @@ namespace CpTiendaElectronica
         {
             esNuevo = false; // Indica que se va a editar un registro existente
             // Expande el formulario para mostrar la sección de entrada de datos
-            Size = new Size(835, 500);
+            Size = new Size(1131, 761); // Matches FrmProducto expanded size
 
             // Obtiene el índice de la fila seleccionada y el ID del cliente
             int index = dgvLista.CurrentCell.RowIndex;
@@ -264,8 +264,8 @@ namespace CpTiendaElectronica
                 if (esNuevo)
                 {
                     // fechaRegistro y estado suelen tener DEFAULT en la tabla y se manejan en el modelo/BD
-                    // cliente.fechaRegistro = DateTime.Now; 
-                    // cliente.estado = 1; 
+                    // cliente.fechaRegistro = DateTime.Now;  
+                    // cliente.estado = 1;  
                     try
                     {
                         // Llama al método de inserción de la capa de negocio
@@ -300,7 +300,7 @@ namespace CpTiendaElectronica
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                listar();             // Refresca el DataGridView
+                listar();              // Refresca el DataGridView
                 btnCancelar.PerformClick(); // Vuelve al estado inicial del formulario
             }
         }
@@ -308,7 +308,7 @@ namespace CpTiendaElectronica
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             // Restablece el tamaño del formulario
-            Size = new Size(835, 362);
+            Size = new Size(835, 400); // Matches FrmProducto cancelled size
             limpiar(); // Limpia los campos de entrada
         }
 

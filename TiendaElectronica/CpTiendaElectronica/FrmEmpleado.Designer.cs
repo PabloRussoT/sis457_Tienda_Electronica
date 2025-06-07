@@ -104,6 +104,8 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.Color.LightGray;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(711, 52);
             this.btnBuscar.Name = "btnBuscar";
@@ -112,11 +114,13 @@
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.LightGray;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(678, 161);
             this.btnCancelar.Name = "btnCancelar";
@@ -125,11 +129,13 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(551, 161);
             this.btnGuardar.Name = "btnGuardar";
@@ -138,11 +144,13 @@
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(179, 3);
             this.btnNuevo.Name = "btnNuevo";
@@ -151,11 +159,13 @@
             this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.Location = new System.Drawing.Point(495, 3);
             this.btnCerrar.Name = "btnCerrar";
@@ -164,11 +174,13 @@
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(387, 3);
             this.btnEliminar.Name = "btnEliminar";
@@ -177,11 +189,13 @@
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(283, 3);
             this.btnEditar.Name = "btnEditar";
@@ -190,11 +204,12 @@
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // gbxDatos
             // 
+            this.gbxDatos.BackColor = System.Drawing.Color.AliceBlue;
             this.gbxDatos.Controls.Add(this.lblUsuario);
             this.gbxDatos.Controls.Add(this.txtUsuario);
             this.gbxDatos.Controls.Add(this.lblCargo);
@@ -223,6 +238,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblUsuario.Location = new System.Drawing.Point(344, 118);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(72, 20);
@@ -240,6 +256,7 @@
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
+            this.lblCargo.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblCargo.Location = new System.Drawing.Point(352, 83);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(59, 20);
@@ -257,6 +274,7 @@
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
+            this.lblCelular.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblCelular.Location = new System.Drawing.Point(344, 51);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(67, 20);
@@ -289,6 +307,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
+            this.lblDireccion.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblDireccion.Location = new System.Drawing.Point(334, 16);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(86, 20);
@@ -298,6 +317,7 @@
             // lblSegundoApellido
             // 
             this.lblSegundoApellido.AutoSize = true;
+            this.lblSegundoApellido.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblSegundoApellido.Location = new System.Drawing.Point(15, 127);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
             this.lblSegundoApellido.Size = new System.Drawing.Size(138, 20);
@@ -323,6 +343,7 @@
             // lblPrimerApellido
             // 
             this.lblPrimerApellido.AutoSize = true;
+            this.lblPrimerApellido.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblPrimerApellido.Location = new System.Drawing.Point(25, 92);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
             this.lblPrimerApellido.Size = new System.Drawing.Size(128, 20);
@@ -340,6 +361,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblNombre.Location = new System.Drawing.Point(71, 57);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(82, 20);
@@ -358,6 +380,7 @@
             // lblCedulaIdentidad
             // 
             this.lblCedulaIdentidad.AutoSize = true;
+            this.lblCedulaIdentidad.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblCedulaIdentidad.Location = new System.Drawing.Point(0, 19);
             this.lblCedulaIdentidad.Name = "lblCedulaIdentidad";
             this.lblCedulaIdentidad.Size = new System.Drawing.Size(161, 20);
@@ -366,6 +389,7 @@
             // 
             // gbxLista
             // 
+            this.gbxLista.BackColor = System.Drawing.Color.AliceBlue;
             this.gbxLista.Controls.Add(this.dgvLista);
             this.gbxLista.Location = new System.Drawing.Point(14, 89);
             this.gbxLista.Name = "gbxLista";
@@ -391,6 +415,7 @@
             // lblParametro
             // 
             this.lblParametro.AutoSize = true;
+            this.lblParametro.ForeColor = System.Drawing.Color.DarkBlue;
             this.lblParametro.Location = new System.Drawing.Point(14, 42);
             this.lblParametro.Name = "lblParametro";
             this.lblParametro.Size = new System.Drawing.Size(350, 20);
@@ -400,6 +425,7 @@
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblTitulo.Location = new System.Drawing.Point(9, 11);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(800, 31);
@@ -418,6 +444,7 @@
             // 
             // pnlAcciones
             // 
+            this.pnlAcciones.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pnlAcciones.Controls.Add(this.btnCerrar);
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
@@ -431,7 +458,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(824, 576);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.gbxDatos);
@@ -446,7 +473,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "::: Minerva - Empleado :::";
+            this.Text = "::: TIenda ELectronica - Empleado :::";
             this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.erpCedulaIdentidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpNombres)).EndInit();

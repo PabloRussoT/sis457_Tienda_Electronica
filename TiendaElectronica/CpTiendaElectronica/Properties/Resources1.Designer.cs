@@ -63,6 +63,36 @@ namespace CpTiendaElectronica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1492790846_9cancel_84247 {
+            get {
+                object obj = ResourceManager.GetObject("1492790846-9cancel_84247", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _353430_checkbox_edit_pen_pencil_107516 {
+            get {
+                object obj = ResourceManager.GetObject("353430-checkbox-edit-pen-pencil_107516", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3844432_magnifier_search_zoom_110300 {
+            get {
+                object obj = ResourceManager.GetObject("3844432-magnifier-search-zoom_110300", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _new {
             get {
                 object obj = ResourceManager.GetObject("new", resourceCulture);
@@ -86,6 +116,36 @@ namespace CpTiendaElectronica.Properties {
         internal static System.Drawing.Bitmap account_login_log_in_icon_250759__1_ {
             get {
                 object obj = ResourceManager.GetObject("account_login_log_in_icon_250759 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_circle_create_expand_new_plus_icon_123218 {
+            get {
+                object obj = ResourceManager.GetObject("add_circle_create_expand_new_plus_icon_123218", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_circle_create_expand_new_plus_icon_123218__2_ {
+            get {
+                object obj = ResourceManager.GetObject("add_circle_create_expand_new_plus_icon_123218 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cashier_icon_icons_com_53629 {
+            get {
+                object obj = ResourceManager.GetObject("cashier_icon-icons.com_53629", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +253,16 @@ namespace CpTiendaElectronica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap save_disk_icon_icons_com_71576 {
+            get {
+                object obj = ResourceManager.GetObject("save-disk_icon-icons.com_71576", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -206,6 +276,36 @@ namespace CpTiendaElectronica.Properties {
         internal static System.Drawing.Bitmap security_lock {
             get {
                 object obj = ResourceManager.GetObject("security-lock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seo_social_web_network_internet_262_icon_icons_com_61518 {
+            get {
+                object obj = ResourceManager.GetObject("seo-social-web-network-internet_262_icon-icons.com_61518", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap windowviewdetailscreen_ventana_vista_detall_10768 {
+            get {
+                object obj = ResourceManager.GetObject("windowviewdetailscreen_ventana_vista_detall_10768", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wishlist_product_list_order_cart_icon_225175___copia__2_ {
+            get {
+                object obj = ResourceManager.GetObject("wishlist_product_list_order_cart_icon_225175 - copia (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

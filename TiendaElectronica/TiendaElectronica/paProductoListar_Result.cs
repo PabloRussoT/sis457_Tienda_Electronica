@@ -24,8 +24,6 @@ namespace TiendaElectronica
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
-        public object Marca { get; set; }
-        public object Categoria { get; set; }
         public object CategoriaNombre { get; set; }
         public object MarcaNombre { get; set; }
     }

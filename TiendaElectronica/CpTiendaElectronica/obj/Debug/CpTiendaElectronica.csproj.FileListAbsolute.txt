@@ -50,3 +50,31 @@ C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaEle
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmCliente.resources
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmVenta.resources
 C:\Users\filof\Desktop\Proyecto Final Sis457\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe.config
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\Resources\edit.png
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\CpTiendaElectronica.exe.config
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\CpTiendaElectronica.exe
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\CpTiendaElectronica.pdb
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\ClnTiendaElectronica.dll
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\TiendaElectronica.dll
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\EntityFramework.dll
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\ClnTiendaElectronica.pdb
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\ClnTiendaElectronica.dll.config
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\TiendaElectronica.pdb
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\TiendaElectronica.dll.config
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\EntityFramework.xml
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.csproj.AssemblyReference.cache
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmAutenticacion.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmCliente.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmEmpleado.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmPrincipal.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmProducto.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmVenta.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.Properties.Resources.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.csproj.GenerateResource.cache
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe.licenses
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.csproj.CoreCompileInputs.cache
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTienda.B7E1FCB5.Up2Date
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.pdb
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmVentaDetalle.resources
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe.config

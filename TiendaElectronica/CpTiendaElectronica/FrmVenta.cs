@@ -5,19 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using ClnTiendaElectronica; // Lógica de negocio (where VentaCln, ProductoCln, ClienteCln are)
-using TiendaElectronica;    // IMPORTANT: This now brings in the shared VentaDetalle
+using ClnTiendaElectronica; // Lógica de negocio
+using TiendaElectronica;    // Entidades del modelo
 
 namespace CpTiendaElectronica
 {
     public partial class FrmVenta : Form
     {
-        // MEJORA: Usar BindingList<T> para que el DataGridView se actualice automáticamente.
-        // Ahora refiere a TiendaElectronica.VentaDetalle, la definición única y compartida.
-        private BindingList<TiendaElectronica.VentaDetalle> detallesVenta = new BindingList<TiendaElectronica.VentaDetalle>();
-
+        // Lista para manejar los ítems del carrito de compras
+        private List<VentaDetalleDisplay> detallesVenta = new List<VentaDetalleDisplay>();
         // Asumimos que el ID del empleado se obtiene de la sesión actual
+        // Para este ejemplo, lo dejaremos como un valor fijo.
         private int idEmpleadoActual = 1;
+
+        // NEW: Private list to hold all clients, for filtering purposes
+        private List<TiendaElectronica.Cliente> todosLosClientes;
 
         public FrmVenta()
         {
@@ -26,30 +28,23 @@ namespace CpTiendaElectronica
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-            CargarClientes();
+            CargarClientes(); // This will now load ALL clients initially
             CargarProductos();
             ConfigurarColumnasCarrito();
-            dgvCarrito.DataSource = detallesVenta;
-            CalcularTotal();
+            dtpFechaVenta.Value = DateTime.Now; // Set the date picker to today's date
         }
 
         private void CargarClientes()
         {
             try
             {
-                var clientes = ClienteCln.listar();
-                if (clientes != null && clientes.Any())
-                {
-                    cbxClientes.DataSource = clientes;
-                    cbxClientes.DisplayMember = "nombreCompleto";
-                    cbxClientes.ValueMember = "id";
-                    cbxClientes.SelectedIndex = -1;
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron clientes para cargar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cbxClientes.DataSource = null;
-                }
+                // Load all clients once and store them in todosLosClientes
+                todosLosClientes = ClienteCln.listar();
+
+                // Bind the ComboBox to the full list initially
+                cbxClientes.DataSource = todosLosClientes;
+                cbxClientes.DisplayMember = "nombreCompleto"; // Make sure Cliente entity has this property
+                cbxClientes.ValueMember = "id";              // Make sure Cliente entity has this property
             }
             catch (Exception ex)
             {
@@ -57,27 +52,69 @@ namespace CpTiendaElectronica
             }
         }
 
+        // NEW: Logic for client search
+        private void txtBusquedaCliente_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtBusquedaCliente.Text.Trim().ToLower();
+
+            // If the search box is empty, show all clients
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                cbxClientes.DataSource = todosLosClientes;
+            }
+            else
+            {
+                // Filter the 'todosLosClientes' list based on the search text
+                // Adjust the properties used for searching (e.g., nombreCompleto, nit, ci)
+                var filteredClients = todosLosClientes.Where(c =>
+                    c.nombreCompleto.ToLower().Contains(searchText) 
+                  // Assuming 'nit' exists and is a string
+                       // Assuming 'ci' exists and is a string
+                ).ToList();
+
+                // Update the ComboBox's DataSource with the filtered list
+                cbxClientes.DataSource = filteredClients;
+
+                // If no clients match, ensure the ComboBox is empty or shows no selection
+                if (filteredClients.Count == 0)
+                {
+                    cbxClientes.SelectedIndex = -1; // No item selected
+                }
+            }
+            // Re-bind to ensure the display updates correctly, even if the source is the same list object
+            cbxClientes.DisplayMember = "nombreCompleto";
+            cbxClientes.ValueMember = "id";
+        }
+
+
         private void CargarProductos(string parametro = "")
         {
             try
             {
-                var productos = ProductoCln.listarPa(parametro);
+                // Carga productos usando el procedimiento almacenado para búsqueda
+                dgvListaProductos.DataSource = ProductoCln.listarPa(parametro);
 
-                var productosParaMostrar = productos.Select(p => new
+                foreach (DataGridViewColumn column in dgvListaProductos.Columns)
                 {
-                    ID = p.id,
-                    Descripcion = p.descripcion,
-                    Stock = p.saldo,
-                    PrecioVenta = p.precioVenta
-                }).ToList();
+                    column.Visible = false;
+                }
 
-                dgvListaProductos.DataSource = productosParaMostrar;
-
-                if (dgvListaProductos.Columns.Contains("ID")) dgvListaProductos.Columns["ID"].HeaderText = "Código";
-                if (dgvListaProductos.Columns.Contains("Descripcion")) dgvListaProductos.Columns["Descripcion"].HeaderText = "Descripción del Producto";
-                if (dgvListaProductos.Columns.Contains("Stock")) dgvListaProductos.Columns["Stock"].HeaderText = "Cantidad Disponible";
-                if (dgvListaProductos.Columns.Contains("PrecioVenta")) dgvListaProductos.Columns["PrecioVenta"].HeaderText = "Precio Unitario";
-
+                if (dgvListaProductos.Columns.Contains("descripcion"))
+                {
+                    dgvListaProductos.Columns["descripcion"].Visible = true;
+                    dgvListaProductos.Columns["descripcion"].HeaderText = "Producto";
+                }
+                if (dgvListaProductos.Columns.Contains("precioVenta"))
+                {
+                    dgvListaProductos.Columns["precioVenta"].Visible = true;
+                    dgvListaProductos.Columns["precioVenta"].HeaderText = "Precio Unit.";
+                    dgvListaProductos.Columns["precioVenta"].DefaultCellStyle.Format = "N2";
+                }
+                if (dgvListaProductos.Columns.Contains("saldo"))
+                {
+                    dgvListaProductos.Columns["saldo"].Visible = true;
+                    dgvListaProductos.Columns["saldo"].HeaderText = "Stock";
+                }
             }
             catch (Exception ex)
             {
@@ -90,14 +127,11 @@ namespace CpTiendaElectronica
             dgvCarrito.Columns.Clear();
             dgvCarrito.AutoGenerateColumns = false;
 
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "IdProducto", DataPropertyName = "IdProducto", HeaderText = "ID Producto", Visible = false });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "DescripcionProducto", DataPropertyName = "DescripcionProducto", HeaderText = "Producto", Width = 300 });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "Cantidad", DataPropertyName = "Cantidad", HeaderText = "Cantidad" });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "PrecioUnitario", DataPropertyName = "PrecioUnitario", HeaderText = "Precio Unit." });
-            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "Subtotal", DataPropertyName = "Subtotal", HeaderText = "Subtotal" });
-
-            dgvCarrito.Columns["PrecioUnitario"].DefaultCellStyle.Format = "N2";
-            dgvCarrito.Columns["Subtotal"].DefaultCellStyle.Format = "N2";
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "ProductoIdColumn", DataPropertyName = "IdProducto", HeaderText = "ID Producto", Visible = false });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "DescripcionProductoColumn", DataPropertyName = "DescripcionProducto", HeaderText = "Producto", Width = 200, ReadOnly = true });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "CantidadColumn", DataPropertyName = "Cantidad", HeaderText = "Cantidad", Width = 80, ReadOnly = true });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "PrecioUnitarioColumn", DataPropertyName = "PrecioUnitario", HeaderText = "Precio Unit.", Width = 90, DefaultCellStyle = new DataGridViewCellStyle { Format = "N2" }, ReadOnly = true });
+            dgvCarrito.Columns.Add(new DataGridViewTextBoxColumn { Name = "SubtotalColumn", DataPropertyName = "Subtotal", HeaderText = "Subtotal", Width = 100, DefaultCellStyle = new DataGridViewCellStyle { Format = "N2" }, ReadOnly = true });
         }
 
         private void txtBusquedaProducto_TextChanged(object sender, EventArgs e)
@@ -109,21 +143,21 @@ namespace CpTiendaElectronica
         {
             if (dgvListaProductos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar un producto de la lista para agregar al carrito.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un producto de la lista.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             var filaSeleccionada = dgvListaProductos.SelectedRows[0];
-            int idProducto = (int)filaSeleccionada.Cells["ID"].Value;
-            string descripcionProducto = filaSeleccionada.Cells["Descripcion"].Value.ToString();
-            decimal precioVenta = (decimal)filaSeleccionada.Cells["PrecioVenta"].Value;
-            decimal saldoDisponible = (decimal)filaSeleccionada.Cells["Stock"].Value;
+            int idProducto = (int)filaSeleccionada.Cells["id"].Value;
+            string descripcionProducto = filaSeleccionada.Cells["descripcion"].Value?.ToString() ?? "N/A";
+            decimal precioVenta = (decimal)filaSeleccionada.Cells["precioVenta"].Value;
+            decimal saldoDisponible = (decimal)filaSeleccionada.Cells["saldo"].Value;
 
             decimal cantidadAAgregar = nudCantidad.Value;
 
             if (cantidadAAgregar <= 0)
             {
-                MessageBox.Show("La cantidad a agregar debe ser mayor que cero.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La cantidad a agregar debe ser mayor a cero.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -131,39 +165,47 @@ namespace CpTiendaElectronica
 
             if (itemExistente != null)
             {
-                // Calculate potential new total quantity
-                decimal nuevaCantidadTotal = itemExistente.Cantidad + cantidadAAgregar;
-
-                if (nuevaCantidadTotal > saldoDisponible)
+                if (itemExistente.Cantidad + cantidadAAgregar > saldoDisponible)
                 {
-                    MessageBox.Show($"La cantidad total ({nuevaCantidadTotal}) excede el stock disponible ({saldoDisponible}).", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La cantidad solicitada excede el stock disponible para este producto.", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                itemExistente.Cantidad = nuevaCantidadTotal; // Update the quantity
-                // Corrected: Calculate subtotal with decimal precision. PrecioUnitario remains the same.
-                itemExistente.Subtotal = (int)(itemExistente.Cantidad * itemExistente.PrecioUnitario);
+                itemExistente.Cantidad += cantidadAAgregar;
+                itemExistente.Subtotal = itemExistente.Cantidad * itemExistente.PrecioUnitario;
             }
             else
             {
                 if (cantidadAAgregar > saldoDisponible)
                 {
-                    MessageBox.Show($"La cantidad solicitada ({cantidadAAgregar}) excede el stock disponible ({saldoDisponible}).", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La cantidad solicitada excede el stock disponible para este producto.", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                var nuevoItem = new TiendaElectronica.VentaDetalle
+                var nuevoItem = new VentaDetalleDisplay
                 {
                     IdProducto = idProducto,
                     DescripcionProducto = descripcionProducto,
                     Cantidad = cantidadAAgregar,
                     PrecioUnitario = precioVenta,
-                    // Corrected: Calculate subtotal with decimal precision.
-                    Subtotal = (int)(cantidadAAgregar * precioVenta)
+                    Subtotal = cantidadAAgregar * precioVenta
                 };
                 detallesVenta.Add(nuevoItem);
             }
 
             ActualizarCarrito();
             nudCantidad.Value = 1;
+        }
+
+        private void ActualizarCarrito()
+        {
+            dgvCarrito.DataSource = null;
+            dgvCarrito.DataSource = detallesVenta.ToList();
+            CalcularTotal();
+        }
+
+        private void CalcularTotal()
+        {
+            decimal total = detallesVenta.Sum(d => d.Subtotal);
+            lblTotalValor.Text = $"S/. {total:N2}";
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
@@ -174,77 +216,125 @@ namespace CpTiendaElectronica
                 return;
             }
 
-            if (dgvCarrito.SelectedRows[0].DataBoundItem is TiendaElectronica.VentaDetalle itemAEliminar)
+            try
             {
-                detallesVenta.Remove(itemAEliminar);
-                ActualizarCarrito();
+                int idProductoEliminar = (int)dgvCarrito.SelectedRows[0].Cells["ProductoIdColumn"].Value;
+                var itemAEliminar = detallesVenta.FirstOrDefault(p => p.IdProducto == idProductoEliminar);
+
+                if (itemAEliminar != null)
+                {
+                    detallesVenta.Remove(itemAEliminar);
+                    ActualizarCarrito();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No se pudo obtener el producto seleccionado para eliminar. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ocurrió un error al intentar eliminar el producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void ActualizarCarrito()
-        {
-            CalcularTotal();
-        }
-
-        private void CalcularTotal()
-        {
-            decimal total = detallesVenta.Sum(d => d.Subtotal);
-            lblTotalValor.Text = $"S/. {total:N2}";
         }
 
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
             if (cbxClientes.SelectedValue == null)
             {
-                MessageBox.Show("Debe seleccionar un cliente para registrar la venta.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un cliente.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (detallesVenta.Count == 0)
             {
-                MessageBox.Show("El carrito de compras está vacío. Agregue productos para registrar una venta.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El carrito de compras está vacío.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
                 int idCliente = (int)cbxClientes.SelectedValue;
-                DateTime fechaVenta = dtpFechaVenta.Value; // Get the date from the DateTimePicker
+                // Get the selected client's name from the ComboBox
+                string nombreClienteSeleccionado = cbxClientes.Text;
+                decimal totalVentaCalculado = detallesVenta.Sum(d => d.Subtotal);
 
-                // Call the correct insertarVenta overload with fechaVenta
-                VentaCln.insertarVenta(idEmpleadoActual, idCliente, fechaVenta, detallesVenta.ToList());
+                Venta nuevaVenta = new Venta
+                {
+                    idCliente = idCliente,
+                    idEmpleado = idEmpleadoActual,
+                    fechaVenta = dtpFechaVenta.Value, // Use the date from the DateTimePicker
+                    total = totalVentaCalculado,
+                    usuarioRegistro = "admin",
+                    fechaRegistro = DateTime.Now,
+                    estado = 1
+                };
+
+                List<TiendaElectronica.VentaDetalle> ventaDetallesParaDB = new List<TiendaElectronica.VentaDetalle>();
+                foreach (var displayItem in detallesVenta)
+                {
+                    ventaDetallesParaDB.Add(new TiendaElectronica.VentaDetalle
+                    {
+                        idProducto = displayItem.IdProducto,
+                        cantidad = (int)displayItem.Cantidad,
+                        precioUnitario = displayItem.PrecioUnitario,
+                        total = displayItem.Subtotal,
+                        usuarioRegistro = "admin",
+                        fechaRegistro = DateTime.Now,
+                        estado = 1
+                    });
+                }
+
+                VentaCln.RegistrarVenta(nuevaVenta, ventaDetallesParaDB);
 
                 MessageBox.Show("Venta registrada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                // --- NEW CODE ADDED HERE TO OPEN FrmVentaDetalle ---
+                // Create a copy of the list to pass, so modifications in FrmVentaDetalle don't affect FrmVenta's list
+                List<VentaDetalleDisplay> detallesParaMostrar = detallesVenta.ToList();
+                FrmVentaDetalle frmDetalle = new FrmVentaDetalle(detallesParaMostrar, nombreClienteSeleccionado, totalVentaCalculado);
+                frmDetalle.ShowDialog(); // Show the detail form as a modal dialog
+                // --- END NEW CODE ---
+
                 LimpiarFormulario();
-                CargarProductos(); // Reload products to reflect stock changes
+                CargarProductos(); // Recargar productos para reflejar el stock actualizado
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error al registrar la venta: {ex.Message}\n\nDetalles técnicos:\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ocurrió un error al registrar la venta: {ex.Message}\n\nDetalle: {ex.InnerException?.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void LimpiarFormulario()
         {
             detallesVenta.Clear();
-            CalcularTotal();
+            ActualizarCarrito();
             txtBusquedaProducto.Clear();
-            cbxClientes.SelectedIndex = -1;
+            txtBusquedaCliente.Clear(); // Clear the client search box
+            if (cbxClientes.Items.Count > 0)
+            {
+                cbxClientes.SelectedIndex = 0; // Select the first client if available
+            }
             nudCantidad.Value = 1;
-            dtpFechaVenta.Value = DateTime.Now; // Reset date to current date
+            dtpFechaVenta.Value = DateTime.Now; // Reset date to today
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de que desea cancelar la venta actual? Se perderán todos los productos en el carrito.", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de que desea cancelar la venta actual?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 LimpiarFormulario();
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+
+    // This class is used for displaying data in the DataGridView.
+    // It is defined here to be accessible by both FrmVenta and FrmVentaDetalle.
+    public class VentaDetalleDisplay
+    {
+        public int IdProducto { get; set; }
+        public string DescripcionProducto { get; set; }
+        public decimal Cantidad { get; set; }
+        public decimal PrecioUnitario { get; set; }
+        public decimal Subtotal { get; set; }
     }
 }

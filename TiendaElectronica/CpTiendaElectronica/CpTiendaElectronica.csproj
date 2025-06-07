@@ -95,6 +95,12 @@
     <Compile Include="FrmVenta.Designer.cs">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVentaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentaDetalle.Designer.cs">
+      <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources1.Designer.cs">
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVenta.resx">
       <DependentUpon>FrmVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentaDetalle.resx">
+      <DependentUpon>FrmVentaDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -151,9 +160,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\windowviewdetailscreen_ventana_vista_detall_10768.ico" />
+    <None Include="Resources\wishlist_product_list_order_cart_icon_225175 - copia %282%29.ico" />
+    <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_61518.png" />
     <None Include="Resources\account_login_log_in_icon_250759.png" />
     <None Include="Resources\account_login_log_in_icon_250759 %281%29.png" />
+    <None Include="Resources\add_circle_create_expand_new_plus_icon_123218.png" />
+    <None Include="Resources\add_circle_create_expand_new_plus_icon_123218 %282%29.png" />
+    <None Include="Resources\353430-checkbox-edit-pen-pencil_107516.png" />
+    <None Include="Resources\1492790846-9cancel_84247.png" />
+    <None Include="Resources\3844432-magnifier-search-zoom_110300.png" />
     <Content Include="Resources\cancel.png" />
+    <None Include="Resources\cashier_icon-icons.com_53629.ico" />
     <Content Include="Resources\clients.png" />
     <Content Include="Resources\close.png" />
     <None Include="Resources\customer_person_people_man_you_1625.png" />
@@ -166,6 +184,7 @@
     <Content Include="Resources\new.png" />
     <Content Include="Resources\principal.jpg" />
     <Content Include="Resources\provider.png" />
+    <None Include="Resources\save-disk_icon-icons.com_71576.png" />
     <Content Include="Resources\save.png" />
     <Content Include="Resources\search.png" />
     <Content Include="Resources\security-lock.png" />

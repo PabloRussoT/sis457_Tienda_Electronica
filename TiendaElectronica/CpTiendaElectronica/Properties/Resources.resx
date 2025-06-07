@@ -127,11 +127,26 @@
   <data name="login_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="clients" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clients.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3844432-magnifier-search-zoom_110300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3844432-magnifier-search-zoom_110300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="provider" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\provider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="353430-checkbox-edit-pen-pencil_107516" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\353430-checkbox-edit-pen-pencil_107516.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_circle_create_expand_new_plus_icon_123218" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_circle_create_expand_new_plus_icon_123218.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="security-lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\security-lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_circle_create_expand_new_plus_icon_123218 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_circle_create_expand_new_plus_icon_123218 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +154,17 @@
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cashier_icon-icons.com_53629" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cashier_icon-icons.com_53629.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="electronics-merchandising-computer-displays" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\electronics-merchandising-computer-displays.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1492790846-9cancel_84247" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1492790846-9cancel_84247.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save-disk_icon-icons.com_71576" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save-disk_icon-icons.com_71576.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,10 +178,19 @@
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clients" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clients.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="customer_person_people_man_you_1625" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_person_people_man_you_1625.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wishlist_product_list_order_cart_icon_225175 - copia (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wishlist_product_list_order_cart_icon_225175 - copia (2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="seo-social-web-network-internet_262_icon-icons.com_61518" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seo-social-web-network-internet_262_icon-icons.com_61518.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="windowviewdetailscreen_ventana_vista_detall_10768" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\windowviewdetailscreen_ventana_vista_detall_10768.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

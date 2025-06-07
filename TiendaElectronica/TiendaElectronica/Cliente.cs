@@ -21,11 +21,8 @@ namespace TiendaElectronica
         }
     
         public int id { get; set; }
-        public object Id { get; set; }
         public Nullable<long> nit { get; set; }
-        public object Nit { get; set; }
         public string nombreCompleto { get; set; }
-        public object NombreCompleto { get; set; }
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
