@@ -283,7 +283,7 @@ namespace CpTiendaElectronica
                 }
                 listar();
                 btnCancelar.PerformClick(); // This will also call limpiar()
-                MessageBox.Show("Producto guardado correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Producto guardado correctamente", "::: Tienda Electronica - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -294,12 +294,12 @@ namespace CpTiendaElectronica
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             string codigo = dgvLista.Rows[index].Cells["codigo"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro de eliminar el producto {codigo}?",
-                "::: Minerva - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                "::: Tienda Electronica - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 ProductoCln.eliminar(id, Util.usuario.usuario1);
                 listar();
-                MessageBox.Show("Producto dado de baja correctamente", "::: Minerva - Mensaje :::",
+                MessageBox.Show("Producto dado de baja correctamente", "::: Tienda Electronica - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

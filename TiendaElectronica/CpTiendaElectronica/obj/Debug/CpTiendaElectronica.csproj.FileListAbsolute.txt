@@ -77,4 +77,7 @@ C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElect
 C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe
 C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.pdb
 C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.FrmVentaDetalle.resources
-C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe.config
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\CpTiendaElectronica.exe.manifest
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\bin\Debug\CpTiendaElectronica.application
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.exe.manifest
+C:\Users\filof\Desktop\sis457_Tienda_Electronica\TiendaElectronica\CpTiendaElectronica\obj\Debug\CpTiendaElectronica.application

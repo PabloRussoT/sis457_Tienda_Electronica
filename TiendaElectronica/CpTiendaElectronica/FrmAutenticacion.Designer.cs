@@ -51,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblTitulo.ForeColor = System.Drawing.Color.Red;
             this.lblTitulo.Location = new System.Drawing.Point(12, 10);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(389, 35);
@@ -71,8 +71,9 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblUsuario.ForeColor = System.Drawing.Color.Crimson;
             this.lblUsuario.Location = new System.Drawing.Point(50, 63);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(72, 20);
@@ -93,8 +94,9 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
+            this.lblClave.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblClave.ForeColor = System.Drawing.Color.Crimson;
             this.lblClave.Location = new System.Drawing.Point(20, 98);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(100, 20);
@@ -166,6 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackgroundImage = global::CpTiendaElectronica.Properties.Resources.electronics_merchandising_computer_displays;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(421, 204);
             this.Controls.Add(this.pictureBox1);

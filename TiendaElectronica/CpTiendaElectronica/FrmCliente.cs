@@ -42,7 +42,7 @@ namespace CpTiendaElectronica
                 dgvLista.Columns["nit"].HeaderText = "NIT";
                 dgvLista.Columns["nombres"].HeaderText = "Nombres";
                 dgvLista.Columns["apellidos"].HeaderText = "Apellidos";
-               dgvLista.Columns["nombreCompleto"].Visible = false;
+                dgvLista.Columns["nombreCompleto"].HeaderText = "Nombre Completo";
                 dgvLista.Columns["direccion"].HeaderText = "Dirección";
                 dgvLista.Columns["telefono"].HeaderText = "Teléfono";
                 dgvLista.Columns["email"].HeaderText = "Email";
@@ -63,7 +63,7 @@ namespace CpTiendaElectronica
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al listar clientes: {ex.Message}", "::: Minerva - Error :::",
+                MessageBox.Show($"Error al listar clientes: {ex.Message}", "::: Tienda Electronica - Error :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -77,6 +77,7 @@ namespace CpTiendaElectronica
             txtTelefono.Clear();
             txtDireccion.Clear();
             txtEmail.Clear();
+            txtNombreCompleto.Clear(); // Este campo es de solo lectura, se limpia para consistencia visual.
 
             // Limpiar mensajes de error de los ErrorProvider
             erpNit.SetError(txtNit, "");
@@ -85,6 +86,8 @@ namespace CpTiendaElectronica
             erpTelefono.SetError(txtTelefono, "");
             erpDireccion.SetError(txtDireccion, "");
             erpEmail.SetError(txtEmail, "");
+            // erpNombreCompleto no se utiliza para validación de entrada, ya que es un campo calculado.
+           
         }
 
         // Método para validar la entrada de datos antes de guardar
@@ -99,6 +102,7 @@ namespace CpTiendaElectronica
             erpTelefono.SetError(txtTelefono, "");
             erpDireccion.SetError(txtDireccion, "");
             erpEmail.SetError(txtEmail, "");
+            // erpNombreCompleto no se utiliza para validación de entrada.
 
             // Reglas de validación
             if (string.IsNullOrEmpty(txtNit.Text))
@@ -123,6 +127,8 @@ namespace CpTiendaElectronica
                 esValido = false;
             }
 
+            // Apellidos se permite NULL en la BD, pero aquí se valida como obligatorio para fines de UI.
+            // Si realmente no es obligatorio en la UI, se podría quitar esta validación.
             if (string.IsNullOrEmpty(txtApellidos.Text))
             {
                 erpApellidos.SetError(txtApellidos, "El campo Apellidos es obligatorio.");
@@ -227,32 +233,35 @@ namespace CpTiendaElectronica
                 // Carga los datos del cliente en los controles del formulario
                 txtNit.Text = cliente.nit?.ToString(); // Usa el operador ?. para manejar valores nulos
                 txtNombres.Text = cliente.nombres;
-                txtApellidos.Text = cliente.apellidos;
-                txtDireccion.Text = cliente.direccion;
-                txtTelefono.Text = cliente.telefono;
-                txtEmail.Text = cliente.email;
+                txtApellidos.Text = cliente.apellidos?.ToString(); // Apellidos puede ser NULL en la BD
+                txtDireccion.Text = cliente.direccion?.ToString(); // Direccion puede ser NULL en la BD
+                txtTelefono.Text = cliente.telefono?.ToString(); // Telefono puede ser NULL en la BD
+                txtEmail.Text = cliente.email?.ToString(); // Email puede ser NULL en la BD
+                txtNombreCompleto.Text = cliente.nombreCompleto; // Asigna el nombre completo
+                                                                 // (Este campo es de solo lectura para el usuario, se llena automáticamente)
 
                 txtNit.Focus(); // Pone el foco en el campo NIT
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar datos del cliente para editar: {ex.Message}", "::: Minerva - Error :::",
+                MessageBox.Show($"Error al cargar datos del cliente para editar: {ex.Message}", "::: Tienda Electronica - Error :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Size = new Size(1131, 761); // Mantener el tamaño expandido al guardar
             if (validar()) // Valida los datos antes de intentar guardar
             {
                 var cliente = new Cliente();
                 // Asigna los valores de los controles al objeto Cliente
                 // Para el NIT, si el campo es numérico y no nulo en la BD, se puede parsear directamente.
-                // Si el NIT es opcional (BIGINT NULL), debes manejar el caso de campo vacío en el formulario.
                 cliente.nit = string.IsNullOrEmpty(txtNit.Text.Trim()) ? (long?)null : long.Parse(txtNit.Text.Trim());
                 cliente.nombres = txtNombres.Text.Trim();
                 cliente.apellidos = txtApellidos.Text.Trim();
-                cliente.nombreCompleto = $"{cliente.nombres} {cliente.apellidos}"; // Concatena nombres y apellidos
+                // Construye el nombre completo a partir de nombres y apellidos
+                cliente.nombreCompleto = txtNombreCompleto.Text.Trim();
                 cliente.direccion = txtDireccion.Text.Trim();
                 cliente.telefono = txtTelefono.Text.Trim();
                 cliente.email = txtEmail.Text.Trim();
@@ -263,19 +272,16 @@ namespace CpTiendaElectronica
 
                 if (esNuevo)
                 {
-                    // fechaRegistro y estado suelen tener DEFAULT en la tabla y se manejan en el modelo/BD
-                    // cliente.fechaRegistro = DateTime.Now;  
-                    // cliente.estado = 1;  
                     try
                     {
                         // Llama al método de inserción de la capa de negocio
                         ClienteCln.insertar(cliente);
-                        MessageBox.Show("Cliente insertado correctamente.", "::: Minerva - Mensaje :::",
+                        MessageBox.Show("Cliente insertado correctamente.", "::: Tienda Electronica - Mensaje :::",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al insertar cliente: {ex.Message}", "::: Minerva - Error :::",
+                        MessageBox.Show($"Error al insertar cliente: {ex.Message}", "::: Tienda Electronica - Error :::",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -291,12 +297,12 @@ namespace CpTiendaElectronica
                     {
                         // Llama al método de actualización de la capa de negocio
                         ClienteCln.actualizar(cliente);
-                        MessageBox.Show("Cliente actualizado correctamente.", "::: Minerva - Mensaje :::",
+                        MessageBox.Show("Cliente actualizado correctamente.", "::: Tienda Electronica - Mensaje :::",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al actualizar cliente: {ex.Message}", "::: Minerva - Error :::",
+                        MessageBox.Show($"Error al actualizar cliente: {ex.Message}", "::: Tienda Electronica - Error :::",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -308,7 +314,7 @@ namespace CpTiendaElectronica
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             // Restablece el tamaño del formulario
-            Size = new Size(835, 400); // Matches FrmProducto cancelled size
+            Size = new Size(1131, 400); // Matches FrmProducto cancelled size
             limpiar(); // Limpia los campos de entrada
         }
 
@@ -317,7 +323,7 @@ namespace CpTiendaElectronica
             // Verifica que haya una fila seleccionada
             if (dgvLista.CurrentCell == null)
             {
-                MessageBox.Show("Seleccione un cliente para eliminar.", "::: Minerva - Advertencia :::",
+                MessageBox.Show("Seleccione un cliente para eliminar.", "::: Tienda Electronica - Advertencia :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -330,7 +336,7 @@ namespace CpTiendaElectronica
             // Pide confirmación al usuario
             DialogResult dialog = MessageBox.Show(
                 $"¿Está seguro de dar de baja al cliente con NIT: {nitCliente} ({nombreCompletoCliente})?",
-                "::: Minerva - Confirmación de Eliminación :::",
+                "::: Tienda Electronica - Confirmación de Eliminación :::",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             );
@@ -343,13 +349,13 @@ namespace CpTiendaElectronica
                     // Si no tienes esta clase o variable, reemplázala con una cadena fija como "admin"
                     string usuarioEliminacion = "admin"; // Ejemplo: Util.usuario.usuario1;
                     ClienteCln.eliminar(idCliente, usuarioEliminacion); // Llama al método de eliminación lógica
-                    MessageBox.Show("Cliente dado de baja correctamente.", "::: Minerva - Mensaje :::",
+                    MessageBox.Show("Cliente dado de baja correctamente.", "::: Tienda Electronica - Mensaje :::",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     listar(); // Refresca el DataGridView
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al dar de baja al cliente: {ex.Message}", "::: Minerva - Error :::",
+                    MessageBox.Show($"Error al dar de baja al cliente: {ex.Message}", "::: Tienda Electronica - Error :::",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
